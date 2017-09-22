@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
+
+	image = "../../assets/images/steve-jobs.jpg";
+
   constructor(
 		private router: Router
 	) {

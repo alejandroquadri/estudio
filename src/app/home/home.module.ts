@@ -2,6 +2,8 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { HomeComponent } from './home.component';
 import { LandingPageComponent } from '../landing-page/landing-page.component';
 import { EstudioComponent } from '../estudio/estudio.component';
@@ -30,7 +32,8 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
 @NgModule({
   imports: [
 	  homeRouting,
-    CommonModule
+    CommonModule,
+    NgbModule
   ],
   declarations: [
 	  HomeComponent,

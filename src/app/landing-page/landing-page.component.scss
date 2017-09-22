@@ -1,0 +1,25 @@
+.carousel-wrapper {
+	height: 100vh;
+	display: flex;
+}
+
+.carousel {
+	flex: 1;
+}
+
+.carousel-inner {
+	height: 100%;
+}
+
+.custom {
+	height:100%;
+	flex: 1;
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// esto para hacer la barra transparente
+.navbar-trans {
+  background: transparent; 
+}
