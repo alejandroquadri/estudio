@@ -1,19 +1,28 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: hsla(218, 13%, 28%, 0.5);">
-  <a class="navbar-brand" href="#">C+V arquitectura</a>
+  <a class="navbar-brand" href="#">Quarzo</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
   aria-controls="navbarNav" [attr.aria-expanded]="!isExpanded" aria-label="Toggle navigation" (click)="isExpanded = !isExpanded">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav" [ngbCollapse]="!isExpanded">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-        <a class="nav-link" [routerLink]="['/landing']">Home</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/obras-realizadas']">Solido</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/obras-realizadas']">Obras</a>
+        <a class="nav-link" [routerLink]="['/estudio']">Mica</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/estudio']">Estudio</a>
+        <a class="nav-link" [routerLink]="['/estudio']">Terrazzo</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/estudio']">Nano Terrazzo</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/estudio']">Nosotros</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/estudio']">Contacto</a>
       </li>
     </ul>
   </div>
