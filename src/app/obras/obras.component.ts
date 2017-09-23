@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ObrasComponent implements OnInit {
 
+	cascada = '../../assets/images/cascada.jpg';
+	gehry  = '../../assets/images/gehry.jpg';
+	jobs = '../../assets/images/steve-jobs.jpg';
+
   constructor() { }
 
   ngOnInit() {

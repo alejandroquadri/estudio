@@ -7,7 +7,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-	cascada = '../../assets/images/cascada.jpeg';
+	cascada = '../../assets/images/cascada.jpg';
 	gehry  = '../../assets/images/gehry.jpg';
 	jobs = '../../assets/images/steve-jobs.jpg';
 
