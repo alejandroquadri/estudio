@@ -1,25 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EstudioComponent } from './estudio.component';
+import { MicaComponent } from './mica.component';
 
-describe('EstudioComponent', () => {
-  let component: EstudioComponent;
-  let fixture: ComponentFixture<EstudioComponent>;
+describe('MicaComponent', () => {
+  let component: MicaComponent;
+  let fixture: ComponentFixture<MicaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EstudioComponent ]
+      declarations: [ MicaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EstudioComponent);
+    fixture = TestBed.createComponent(MicaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
