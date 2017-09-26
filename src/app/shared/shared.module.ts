@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SubNavbarComponent } from './components/sub-navbar/sub-navbar.component';
+import { SubNavbarComponent } from './components';
+import { CapitalizePipe } from './pipes';
 
 @NgModule({
   imports: [
@@ -9,11 +11,14 @@ import { SubNavbarComponent } from './components/sub-navbar/sub-navbar.component
     NgbModule
   ],
   declarations: [
-  	SubNavbarComponent
+  	SubNavbarComponent,
+    CapitalizePipe
   ],
 	exports: [
 		CommonModule,
-    NgbModule
+    NgbModule,
+    SubNavbarComponent,
+    CapitalizePipe
 	]
 })
 export class SharedModule { }
