@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SubNavbarComponent } from './components/sub-navbar/sub-navbar.component';
 
 @NgModule({
   imports: [
@@ -8,7 +9,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule
   ],
   declarations: [
-	],
+  	SubNavbarComponent
+  ],
 	exports: [
 		CommonModule,
     NgbModule

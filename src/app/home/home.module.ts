@@ -7,6 +7,7 @@ import { HomeComponent } from './home.component';
 import { LandingPageComponent } from '../landing-page/landing-page.component';
 import { SolidComponent } from '../solid/solid.component';
 import { MicaComponent } from '../mica/mica.component';
+import { TerrazzoModule } from '../terrazzo/terrazzo.module';
 import { TerrazzoComponent } from '../terrazzo/terrazzo.component';
 import { NosotrosComponent } from '../nosotros/nosotros.component';
 import { ContactoComponent } from '../contacto/contacto.component';
@@ -26,7 +27,7 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
 	},
   { 
     path: 'terrazzo',
-    component: TerrazzoComponent
+    component: TerrazzoComponent,
   },
   { 
     path: 'nosotros',
@@ -42,13 +43,14 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
   imports: [
 	  homeRouting,
     SharedModule,
+    TerrazzoModule
   ],
   declarations: [
 	  HomeComponent,
   	LandingPageComponent,
     SolidComponent,
     MicaComponent,
-    TerrazzoComponent,
+    // TerrazzoComponent,
     NosotrosComponent,
     ContactoComponent,
   ]
