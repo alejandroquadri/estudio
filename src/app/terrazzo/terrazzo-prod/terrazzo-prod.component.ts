@@ -9,8 +9,6 @@ import { Media } from '../../shared';
 })
 export class TerrazzoProdComponent implements OnInit {
 
-	// image1: any = './assets/images/quarzo2.jpg';
-	// image2: any = './assets/images/terr3.jpg';
 	images: any;
 
   constructor() {
