@@ -8,7 +8,8 @@ export const Media = {
 	 	terr2: 'https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fterr2.jpg?alt=media&token=21ec8daf-f389-47fd-9d18-278ee396a988',
 	 	terr3: 'https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fterr3.jpg?alt=media&token=085ebbc2-860d-4f25-bd76-9b2969ceedde',
 	 	quarzo1: 'https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fquarzo1.jpg?alt=media&token=02347c72-e95f-42e6-a9a2-ed7611d768f9',
-	 	quarzo2: 'https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fquarzo2.jpg?alt=media&token=e144bd42-a52f-4844-9ec5-e5d1aa514d0d'
+	 	quarzo2: 'https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fquarzo2.jpg?alt=media&token=e144bd42-a52f-4844-9ec5-e5d1aa514d0d',
+	 	colores: 'https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fcustomcolor.jpg?alt=media&token=05716bed-9a8c-42cf-9b60-ce221df4a693'
 	},
 	epoxi : {
 	 	kitchen : 'https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2FoverkreteS.jpg?alt=media&token=8263cfca-79ea-465e-a7c0-83c559a5b93f',
