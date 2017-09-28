@@ -6,6 +6,30 @@
   background-size: cover;
 }
 
+.divImg2 {
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .text {
 	width: 35%;
+}
+
+@media (max-width : 415px) {
+	.text {
+		width:100%;
+	}
+
+	.divImg {
+		height: 35vh;
+		width: 100%;
+		background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	}
+
+	.headingMobile {
+		font-size: 3rem;
+	}
 }

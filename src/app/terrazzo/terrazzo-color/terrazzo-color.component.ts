@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Media } from '../../shared';
 
 @Component({
   selector: 'app-terrazzo-color',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TerrazzoColorComponent implements OnInit {
 
-  constructor() { }
+	images:any;
+
+  constructor() {
+  this.images = Media.terrazzo; }
 
   ngOnInit() {
   }

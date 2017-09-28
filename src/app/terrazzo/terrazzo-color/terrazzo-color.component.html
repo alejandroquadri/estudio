@@ -2,7 +2,11 @@
 	
 	<div class="row">
 		
-		<div class="col"></div>
+		<div *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]" class="col-2">
+			<!-- <img src="https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fcustomcolor.jpg?alt=media&token=05716bed-9a8c-42cf-9b60-ce221df4a693" class="img-fluid rounded-circle" alt="Responsive image"> -->
+			<div class="divImg rounded-circle" [ngStyle]="{'background-image': 'url(' + images.colores + ')'}"></div>
+			Fantasia
+		</div>
 
 	</div>
 
