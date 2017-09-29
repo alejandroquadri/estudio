@@ -1,0 +1,18 @@
+.sebm-google-map-container {
+  height: 100%;
+  width: 100%;
+}
+
+.item {
+	width: 50%;
+}
+
+.estilo {
+	font-weight: 300;
+}
+
+@media (max-width : 415px) {
+	.item {
+		width:100%;
+	}
+}

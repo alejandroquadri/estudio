@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Renderer } from '@angular/core';
 
 @Component({
   selector: 'app-contacto',
@@ -7,9 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoComponent implements OnInit {
 
-  constructor() { }
+	title: string = 'My first AGM project';
+  lat: number = -34.606176;
+  lng: number = -58.424542;
+
+  element: any;
+  mapHeigth: any;
+  @ViewChild('dataContacto') dataContacto: any;
+  @ViewChild('map') map: any;  
+
+  constructor(
+  	private renderer: Renderer
+	) { 
+  // 	this.element = document.getElementsByTagName('agm-marker');
+  // 	this.mapHeigth = this.dataContacto.nativeElement.clientHeight;
+  // 	console.log(this.mapHeigth, this.map);
+		// console.log('cambia', this.element, this.element[0].style.cssText);
+  // 	this.element[0].style.cssText = `
+		// height: ${this.mapHeigth}px;
+		// `; 
+	}
 
   ngOnInit() {
+  	
   }
 
 }
