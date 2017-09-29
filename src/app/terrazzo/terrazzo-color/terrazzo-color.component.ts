@@ -11,7 +11,8 @@ export class TerrazzoColorComponent implements OnInit {
 	images:any;
 
   constructor() {
-  this.images = Media.terrazzo; }
+	  this.images = Media.terrazzo; 
+	}
 
   ngOnInit() {
   }

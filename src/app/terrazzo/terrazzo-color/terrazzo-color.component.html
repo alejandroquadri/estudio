@@ -1,11 +1,23 @@
 <div class="container">
+
+	<h4 class="pt-3 text-secondary" style="font-weight: 300;">Linea Pepito</h4>
 	
-	<div class="row">
-		
-		<div *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]" class="col-2">
-			<!-- <img src="https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fcustomcolor.jpg?alt=media&token=05716bed-9a8c-42cf-9b60-ce221df4a693" class="img-fluid rounded-circle" alt="Responsive image"> -->
-			<div class="divImg rounded-circle" [ngStyle]="{'background-image': 'url(' + images.colores + ')'}"></div>
-			Fantasia
+	<div class="d-flex flex-wrap justify-content-start p-2 mx-auto">
+
+		<div *ngFor="let item of [1,2,3,4,5,6,7]" class="mw-100 p-4">
+			<div class="divImg rounded-circle p-2" [ngStyle]="{'background-image': 'url(' + images.colores + ')'}"></div>
+			<div class="text-center p-2">Fantasia</div>
+		</div>
+
+	</div>
+
+	<h4 class="pt-3 text-secondary" style="font-weight: 300;">Linea Juanito</h4>
+	
+	<div class="d-flex flex-wrap justify-content-start p-2 mx-auto">
+
+		<div *ngFor="let item of [1,2,3,4,5]" class="mw-100 p-4">
+			<div class="divImg rounded-circle p-2" [ngStyle]="{'background-image': 'url(' + images.colores + ')'}"></div>
+			<div class="text-center p-2">Fantasia</div>
 		</div>
 
 	</div>
