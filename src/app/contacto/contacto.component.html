@@ -1,5 +1,5 @@
 <div class="d-flex flex-column flex-md-row align-items-md-stretch">
-	<div #dataContacto class="p-4 item">
+	<div class="p-4 item">
 		<h5 class="estilo">
 			Consultas
 		</h5>
@@ -12,21 +12,21 @@
 			</div>
 		</div>
 		<div>
-			<form>
+			<form [formGroup]="myForm" novalidate (ngSubmit)="submit()">
 				<div class="form-group">
 			    <label for="nombre">Nombre</label>
-			    <input type="text" class="form-control form-control-lg" id="nombre">
+			    <input type="text" formControlName="name" class="form-control form-control-lg" id="nombre">
 			  </div>
 			  <div class="form-group">
 			    <label for="email">E-mail</label>
-			    <input type="email" class="form-control form-control-lg" id="email" aria-describedby="emailHelp">
+			    <input type="e-mail" formControlName="email" class="form-control form-control-lg" id="email" aria-describedby="emailHelp">
 			    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email</small>
 			  </div>
 			  <div class="form-group">
 			    <label for="exampleFormControlTextarea1">Consulta</label>
-			    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" style="font-size: 1.25rem;"></textarea>
+			    <textarea formControlName="query" class="form-control" id="exampleFormControlTextarea1" rows="6" style="font-size: 1.25rem;"></textarea>
 			  </div>
-			  <button type="submit" class="btn btn-outline-secondary">Submit</button>
+			  <button [disabled]="!myForm.valid" type="submit" class="btn btn-outline-secondary">Enviar</button>
 			</form>
 		</div>
 		

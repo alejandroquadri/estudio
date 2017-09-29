@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -21,7 +21,6 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
     rootRouting,
     NgbModule.forRoot(),

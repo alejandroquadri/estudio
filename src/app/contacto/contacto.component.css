@@ -15,4 +15,9 @@
 	.item {
 		width:100%;
 	}
+
+	.sebm-google-map-container {
+	  height: 300px;
+	  width: 100%;
+	}
 }

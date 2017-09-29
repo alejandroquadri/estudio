@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AgmCoreModule } from '@agm/core';
@@ -14,6 +15,8 @@ import { CapitalizePipe } from './pipes';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyADqo_qHiIMLvwZ1H5w4S2MaPiGfrq2IHI'
     }),
+    FormsModule,
+    ReactiveFormsModule,
   ],
   declarations: [
   	SubNavbarComponent,
@@ -21,6 +24,8 @@ import { CapitalizePipe } from './pipes';
   ],
 	exports: [
 		CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     AgmCoreModule,
     SubNavbarComponent,
