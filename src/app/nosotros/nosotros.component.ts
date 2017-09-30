@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Media } from '../shared';
+
 @Component({
   selector: 'app-nosotros',
   templateUrl: './nosotros.component.html',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NosotrosComponent implements OnInit {
 
-  constructor() { }
+	images: any;
+
+  constructor() {
+  	this.images = Media.terrazzo;
+  }
 
   ngOnInit() {
   }
