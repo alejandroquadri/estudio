@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-	isExpanded: boolean;
+	isExpanded: boolean = false;
 
   constructor(
   	private router: Router

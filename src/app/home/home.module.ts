@@ -11,6 +11,7 @@ import { TerrazzoModule } from '../terrazzo/terrazzo.module';
 import { TerrazzoComponent } from '../terrazzo/terrazzo.component';
 import { NosotrosComponent } from '../nosotros/nosotros.component';
 import { ContactoComponent } from '../contacto/contacto.component';
+import { ProductPageComponent } from '../product-page/product-page.component';
 
 const homeRouting: ModuleWithProviders = RouterModule.forChild([
   { 
@@ -37,6 +38,10 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     path: 'contacto',
     component: ContactoComponent
   },
+  { 
+    path: 'product',
+    component: ProductPageComponent
+  }
 ]);
 
 @NgModule({
@@ -53,6 +58,7 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     // TerrazzoComponent,
     NosotrosComponent,
     ContactoComponent,
+    ProductPageComponent
   ]
 })
 export class HomeModule { }

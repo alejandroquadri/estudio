@@ -16,6 +16,9 @@ export const Media = {
 	 	epoxi1: 'https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fepoxi1.jpg?alt=media&token=2f756385-f7ba-49e8-9e0f-6a5cda0b3110',
 	 	epoxi2: 'https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fepoxi2.jpg?alt=media&token=1bd1828b-877a-4466-83ed-ca85fdd57906',
 	 	epoxi3: 'https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fepoxi3.jpg?alt=media&token=333fec94-6cab-4220-b93d-cf1cfbd85695'
+	},
+	design: {
+		platitos: 'https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fplatitos.jpg?alt=media&token=32ebd312-ec08-4414-ba4b-2fa472e822e3'
 	}
 };
 
