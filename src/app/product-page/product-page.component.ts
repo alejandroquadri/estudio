@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { Media } from '../shared';
 
@@ -13,37 +14,51 @@ export class ProductPageComponent implements OnInit {
 	innerWidth: any;
 
 	products = {
-		tables: [
-			{
-				description: 'Mesa 1 x 1',
-				img: ''
-			},
-			{
-				description: 'Mesa de arrime',
-				img: ''
-			},
-			{
-				description: 'Mesa auxiliar',
-				img: ''
-			}
-		],
-		objects: [
-			{
-				description: 'Juego de platos',
-				img: ''
-			},
-			{
-				description: 'Juego de percheros',
-				img: ''
-			},
-			{
-				description: 'Masetas',
-				img: ''
-			}
-		]
+		tables: {
+			family: 'Mesas',
+			items: [
+				{
+					description: 'Mesa 1 x 1',
+					img: '',
+					prize: 800
+				},
+				{
+					description: 'Mesa de arrime',
+					img: '',
+					prize: 200
+				},
+				{
+					description: 'Mesa auxiliar',
+					img: '',
+					prize: 500
+				}
+			]
+		},
+		objects: {
+			family: 'objetos',
+			items: [
+				{
+					description: 'Juego de platos',
+					img: '',
+					prize: 5200
+				},
+				{
+					description: 'Juego de percheros',
+					img: '',
+					prize: 550
+				},
+				{
+					description: 'Masetas',
+					img: '',
+					prize: 530
+				}
+			]
+		}
 	}
 
-  constructor() { 
+  constructor(
+  	private router: Router
+  ) { 
   	this.images = Media.design;
   	this.innerWidth = window.screen.width;
   	console.log(this.innerWidth);
@@ -55,5 +70,9 @@ export class ProductPageComponent implements OnInit {
   onResize(event) {
   	this.innerWidth = event.target.innerWidth;
   	console.log(window.screen.width, event.target.innerWidth, this.innerWidth, this.innerWidth < 576);
+  }
+
+  navigate(route: string, params: any) {
+  	this.router.navigate([`/product/${route}`, params]);
   }
 }

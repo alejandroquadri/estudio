@@ -1,19 +1,22 @@
-<div class="d-flex p-2">
+<!-- !!! todo lo que esta comentado es para tener un layout con filtros al costado
+			tambien hay que descomentar lo que esta comentado en los estilos -->
+<div class="container">
+<!-- <div class="d-flex p-2"> -->
 	
-	<!-- esto es por si quiero usar filtros de -->
+	
 	<!-- <div class="filtros" (window:resize)="onResize($event)" [ngClass] = "{'hiddenFilters': this.innerWidth < 576}">
 		filtros
 	</div> -->
 	
-	<div class="productos my-2">
+	<!-- <div class="productos my-2">
 		<h5 class="pt-3 pl-3 text-secondary" style="font-weight: 300;">Linea Pepito</h5>
 		<div class="productos row my-2">
 
 			<div *ngFor="let item of [1,2,3,4,5,6,7]" class="col-sm-6 col-lg-4 col-xl-3 my-2">
-				<div class="card" >
+				<div class="card border-0" >
 			    <img class="card-img-top" [src]="images.platitos" alt="Card image cap">
 			    <div class="card-body">
-			      <h4 class="card-title">Platitos</h4>
+			      <h6 class="card-title">Platitos</h6>
 			      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 			    </div>
 			  </div>			
@@ -33,9 +36,26 @@
 			  </div>			
 			</div>
 		</div>
-	</div>
+	</div> -->
+
+	<div class="productos my-2">
+		<div *ngFor="let family of products | objNgfor">
+			<h5 class="mx-2 pt-3 pl-3 text-secondary" style="font-weight: 300;">{{ products[family].family | capitalize }} </h5>
+			<div class="productos row m-2">
+
+				<div *ngFor="let item of products[family].items" class="col-sm-6 col-lg-4 col-xl-3 my-2">
+					<div class="card border-0" (click)="navigate(item.description, item)">
+				    <img class="card-img-top" [src]="images.platitos" alt="Card image cap">
+				      <div class="">{{ item.description }}</div>
+				      <div class="text-muted">{{ item.prize | currency:'USD':true:'1.0-0' }}</div>
+				  </div>			
+				</div>
+			</div>
+		</div>
+			
 		
 
-</div>
+<!-- </div> -->
 
 <!-- </div> -->
+</div>

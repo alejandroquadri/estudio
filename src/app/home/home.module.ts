@@ -12,6 +12,7 @@ import { TerrazzoComponent } from '../terrazzo/terrazzo.component';
 import { NosotrosComponent } from '../nosotros/nosotros.component';
 import { ContactoComponent } from '../contacto/contacto.component';
 import { ProductPageComponent } from '../product-page/product-page.component';
+import { ProductDetailComponent } from '../product-detail/product-detail.component';
 
 const homeRouting: ModuleWithProviders = RouterModule.forChild([
   { 
@@ -40,7 +41,11 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
   },
   { 
     path: 'product',
-    component: ProductPageComponent
+    component: ProductPageComponent,
+  },
+  {
+    path: 'product/:id',
+    component: ProductDetailComponent
   }
 ]);
 
@@ -58,7 +63,8 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
     // TerrazzoComponent,
     NosotrosComponent,
     ContactoComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    ProductDetailComponent
   ]
 })
 export class HomeModule { }
