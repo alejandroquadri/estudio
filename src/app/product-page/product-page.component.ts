@@ -19,7 +19,12 @@ export class ProductPageComponent implements OnInit {
 			items: [
 				{
 					description: 'Mesa 1 x 1',
-					img: '',
+					img: [
+						// "https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fplatitos.jpg?alt=media&token=32ebd312-ec08-4414-ba4b-2fa472e822e3",
+						// "https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fcustomcolor.jpg?alt=media&token=05716bed-9a8c-42cf-9b60-ce221df4a693",
+						// "https://firebasestorage.googleapis.com/v0/b/repmant-ce7a5.appspot.com/o/webQuarzo%2Fquarzo2.jpg?alt=media&token=e144bd42-a52f-4844-9ec5-e5d1aa514d0d"
+						1,2,3,'a','b'
+					],
 					prize: 800
 				},
 				{
