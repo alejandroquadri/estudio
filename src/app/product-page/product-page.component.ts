@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 import { Media } from '../shared';
 
@@ -61,8 +62,11 @@ export class ProductPageComponent implements OnInit {
 		}
 	}
 
+	prueba: any;
+
   constructor(
-  	private router: Router
+  	private router: Router,
+  	private db: AngularFireDatabase
   ) { 
   	this.images = Media.design;
   	this.innerWidth = window.screen.width;
@@ -70,6 +74,11 @@ export class ProductPageComponent implements OnInit {
   }
 
   ngOnInit() {
+  	this.prueba = this.db.object('prueba').valueChanges();
+  	this.prueba.subscribe( ret => {
+  		console.log(ret);
+  	})
+
   }
 
   onResize(event) {

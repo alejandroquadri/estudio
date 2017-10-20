@@ -21,7 +21,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-  	this.route.params.forEach((params: Params) => { // pongo parent porque es una ruta previa
+  	this.route.params.forEach((params: Params) => {
       console.log(params['id'], params, params['img'][1]);
       this.ruta = params['id'];
     });
