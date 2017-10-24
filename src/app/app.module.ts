@@ -16,6 +16,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeModule } from './home/home.module';
 
+import { ProductDetailService } from './shared';
+
 // el array del router queda vacio porque se definen las rutas en cada uno de los modulos en cada carpeta
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 
@@ -37,6 +39,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     HomeModule
   ],
   providers: [
+    ProductDetailService
   ],
   bootstrap: [AppComponent]
 })

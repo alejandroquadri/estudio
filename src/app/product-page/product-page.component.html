@@ -38,20 +38,19 @@
 		</div>
 	</div> -->
 
-	<div class="productos my-2">
-		<div *ngFor="let family of products | objNgfor">
-			<h5 class="mx-2 pt-3 pl-3 text-secondary" style="font-weight: 300;">{{ products[family].family | capitalize }} </h5>
+	<div class="productos my-2" *ngIf="products">
 			<div class="productos row m-2">
 
-				<div *ngFor="let item of products[family].items" class="col-sm-6 col-lg-4 col-xl-3 my-2">
-					<div class="card border-0" (click)="navigate(item.description, item)">
-				    <img class="card-img-top" [src]="images.platitos" alt="Card image cap">
-				      <div class="">{{ item.description }}</div>
-				      <div class="text-muted">{{ item.prize | currency:'USD':true:'1.0-0' }}</div>
+				<div *ngFor="let product of products" class="col-sm-6 col-lg-4 col-xl-3 my-2 article">
+					<div class="card border-0" (click)="navigate(product.name, product)">
+				    <img class="card-img-top rounded" [src]="product.images[0].url" alt="Card image cap">
+			      <div class="">{{ product.name | capitalize}}</div>
+			      <div class="text-muted">{{ product.prize | currency:'USD':true:'1.0-0' }}</div>
 				  </div>			
 				</div>
+
 			</div>
-		</div>
+	</div>
 			
 		
 

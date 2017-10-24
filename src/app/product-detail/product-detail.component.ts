@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
-import { Media } from '../shared';
+import { Media, ProductDetailService } from '../shared';
 
 @Component({
   selector: 'app-product-detail',
@@ -11,20 +11,28 @@ import { Media } from '../shared';
 export class ProductDetailComponent implements OnInit {
 
 	ruta: any;
-	images: any;
+	image: any;
+	detail: any;
 
   constructor(
   	private route: ActivatedRoute,
     private router: Router,
+    private detailService: ProductDetailService
   ) { 
-  	this.images = Media.design;
+
   }
 
   ngOnInit() {
-  	this.route.params.forEach((params: Params) => {
-      console.log(params['id'], params, params['img'][1]);
+  	this.route.params.forEach((params: any) => {
       this.ruta = params['id'];
     });
+  	this.detail = this.detailService.detail;
+  	console.log(this.detail);
+  	this.image = this.detail.images[0].url;
+  }
+
+  changeImage(img) {
+  	this.image = img;
   }
 
 }
