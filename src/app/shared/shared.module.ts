@@ -8,6 +8,7 @@ import { AgmCoreModule } from '@agm/core';
 import { SubNavbarComponent } from './components';
 import { CapitalizePipe } from './pipes';
 import { ObjNgforPipe } from './pipes';
+import { ColorsComponent } from './components/colors/colors.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,10 @@ import { ObjNgforPipe } from './pipes';
   declarations: [
   	SubNavbarComponent,
     CapitalizePipe,
-    ObjNgforPipe
+    ObjNgforPipe,
+    ColorsComponent
+  ],
+  providers: [
   ],
 	exports: [
 		CommonModule,
@@ -31,8 +35,9 @@ import { ObjNgforPipe } from './pipes';
     NgbModule,
     AgmCoreModule,
     SubNavbarComponent,
+    ColorsComponent,
     CapitalizePipe,
-    ObjNgforPipe
+    ObjNgforPipe,
 	]
 })
 export class SharedModule { }

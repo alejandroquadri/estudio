@@ -6,7 +6,7 @@ import { Media, ProductDetailService } from '../shared';
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.scss']
+  styleUrls: ['./product-detail.component.scss'],
 })
 export class ProductDetailComponent implements OnInit {
 
@@ -17,7 +17,7 @@ export class ProductDetailComponent implements OnInit {
   constructor(
   	private route: ActivatedRoute,
     private router: Router,
-    private detailService: ProductDetailService
+    private detailService: ProductDetailService,
   ) { 
 
   }
@@ -32,7 +32,12 @@ export class ProductDetailComponent implements OnInit {
   }
 
   changeImage(img) {
-  	this.image = img;
+  	console.log(img);
+  	// this.image = img;
+  }
+
+  cambio(event) {
+  	console.log(event);
   }
 
 }

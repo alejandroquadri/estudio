@@ -1,0 +1,20 @@
+<!-- <p>
+  {{ colors | async | json}}
+</p> -->
+<div *ngIf="colors">
+	<div *ngFor="let serie of colors | objNgfor ">
+		
+		<!-- <div class=""> {{ serie | capitalize }} </div> -->
+
+		<div class="row py-2">
+			
+			<div *ngFor="let color of colors[serie]" class="col-2 justify-content-center">
+				<div class="divImg rounded-circle p-2 m-auto" [ngStyle]="{'background-image': 'url(' + color.url + ')'}"></div>
+				<div class="colorText text-center p-1">{{ color.name }}</div>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
