@@ -20,6 +20,8 @@ export class LandingPageComponent implements OnInit {
 	carouselItems: any;
 	active: any;
 
+  triturado = "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/otros%2FtrituradoMarmol.jpeg?alt=media&token=7110942f-e9c3-458b-86db-ab90d070141a"
+
 	@ViewChild('slide1') slide1 
 
   constructor() {
@@ -29,11 +31,11 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit() {
   	console.log(Media);
-  	this.carouselInner = document.getElementsByClassName('carousel-inner');
-  	this.carouselInner[0].style.cssText = `
-  		height: 100%;
-		`;
-			this.changeCSS();
+  // 	this.carouselInner = document.getElementsByClassName('carousel-inner');
+  // 	this.carouselInner[0].style.cssText = `
+  // 		height: 100%;
+		// `;
+		// 	this.changeCSS();
   }
 
   cambio(event) {

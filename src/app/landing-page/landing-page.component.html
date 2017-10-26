@@ -1,7 +1,7 @@
 <!-- la imagen la saco porque es dificil hacerla responsive. Uso la imagen como cover del div custom.
 Como el template de cada slide se crea dinamicamente por el componente de ng-bootstrap es necesario modificar las clase desde el controlador -->
 
-<div class="carousel-wrapper">
+<!-- <div class="carousel-wrapper">
   <ngb-carousel [interval]="0" (slide)="cambio($event)">
     <ng-template ngbSlide #slide1>
       <div class="carousel-caption">
@@ -32,8 +32,8 @@ Como el template de cada slide se crea dinamicamente por el componente de ng-boo
       <div class="custom" [ngStyle]="{'background-image': 'url(' + terrazzoImg.nico4 + ')'}"></div>
     </ng-template>
   </ngb-carousel>
+</div> -->
+<div class="carousel-wrapper">
+  <div class="custom" [ngStyle]="{'background-image': 'url(' + triturado + ')'}"></div>  
 </div>
-<!-- <div>
-  prueba
-</div>
- -->  
+

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { ProductDataService } from '../../../shared';
 
@@ -11,6 +11,7 @@ export class ColorsComponent implements OnInit {
 
 	colorsObs: any;
 	colors: any;
+  @Input() colorsObj: any;
 
   constructor(
   	private prodService: ProductDataService
@@ -19,9 +20,20 @@ export class ColorsComponent implements OnInit {
   ngOnInit() {
   	this.colorsObs = this.prodService.getColors()
   	this.colorsObs.subscribe( colors => {
-  		this.colors = colors;
-  	})
+  		// this.colors = colors;
+      this.filterColorFamily(colors);
+  	});
+    console.log(this.colorsObj);
+  }
 
+  filterColorFamily(colors: any) {
+    if (!this.colorsObj.cemento) {
+      delete colors.cemento
+    }
+    if (!this.colorsObj.granitico) {
+      delete colors.granitico
+    }
+    this.colors = colors;
   }
 
 }

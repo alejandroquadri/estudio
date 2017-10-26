@@ -31,6 +31,10 @@
   <div class="w-50 p-4">
   	<div class="artName">{{ detail.name }}</div>
   	<div class="text-muted prize">{{ detail.prize | currency:'USD':true:'1.0-0' }}</div>
-  	<app-colors></app-colors>
+  	<app-colors [colorsObj]="detail.colors"></app-colors>
+  	<p class="pt-4"> {{ detail.descripcion }} </p>
+  	<ul *ngFor="let bullet of detail.bullets">
+  		<li> {{ bullet }} </li>
+  	</ul>
   </div>
 </div>
