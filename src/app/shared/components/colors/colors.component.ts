@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { ProductDataService } from '../../../shared';
+import { ProductDataService } from '../../services/product-data.service';
 
 @Component({
   selector: 'app-colors',
@@ -20,10 +20,8 @@ export class ColorsComponent implements OnInit {
   ngOnInit() {
   	this.colorsObs = this.prodService.getColors()
   	this.colorsObs.subscribe( colors => {
-  		// this.colors = colors;
       this.filterColorFamily(colors);
   	});
-    console.log(this.colorsObj);
   }
 
   filterColorFamily(colors: any) {

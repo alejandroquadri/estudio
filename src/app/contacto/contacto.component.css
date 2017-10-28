@@ -5,6 +5,7 @@
 
 .item {
 	width: 50%;
+	margin: auto; /* remover esta linea si quiero incluir el mapa */
 }
 
 .estilo {

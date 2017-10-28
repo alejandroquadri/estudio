@@ -1,10 +1,5 @@
 .carousel-wrapper {
 	height: 100vh;
-	display: flex;
-}
-
-.carousel {
-	flex: 1;
 }
 
 .carousel-inner {
@@ -19,7 +14,46 @@
   background-size: cover;
 }
 
+@media (min-width : 768px) {
+
+	.mobile {
+		display: none;
+	}
+
+}
+
+@media (max-width : 769px) {
+
+	.desktop {
+		display: none;
+	}
+
+}
+
+
 // esto para hacer la barra transparente
 .navbar-trans {
   background: transparent; 
+}
+
+.titles {
+	position: relative;
+  top: 10%;
+  left: 5%;
+  color: white;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+.title {
+	font-size: 10rem;
+}
+
+.subTitle {
+	font-size: 3rem;
+}
+
+.parrafo {
+	font-size: 1.5rem;
+	width: 40vw;
 }
