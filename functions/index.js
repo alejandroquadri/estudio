@@ -30,7 +30,7 @@ exports.sendMail = functions.database.ref('/queries/{pushId}')
 		    from: '"Queo" <noreply@queo.com.ar>',
 		    to: 'ale@quadri.com.ar',
 		    subject: 'Consulta desde queo.com.ar',
-		    text : `${val.name} - ${val.email} - \n ${val.query}`
+		    text : `${val.name} - ${val.email}\n${val.query}`
 		  };
 
 		  return mailTransport.sendMail(mailOptions).then(() => {
