@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 	isExpanded: boolean = false;
 
   constructor(
-  	private router: Router
+  	public router: Router
 	) { }
 
   ngOnInit() {
