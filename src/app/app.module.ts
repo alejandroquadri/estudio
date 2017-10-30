@@ -18,7 +18,8 @@ import { HomeModule } from './home/home.module';
 
 import { ProductDetailService,
          FirebaseApiService,
-         ProductDataService
+         ProductDataService,
+         FormDataService
         } from './shared';
 
 // el array del router queda vacio porque se definen las rutas en cada uno de los modulos en cada carpeta
@@ -44,6 +45,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
   providers: [
     ProductDetailService,
     ProductDataService,
+    FormDataService,
     FirebaseApiService
   ],
   bootstrap: [AppComponent]

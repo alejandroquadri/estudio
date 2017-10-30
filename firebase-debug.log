@@ -1,0 +1,108 @@
+[debug] [2017-10-30T20:24:17.751Z] ----------------------------------------------------------------------
+[debug] [2017-10-30T20:24:17.754Z] Command:       /usr/local/bin/node /Users/alejandroquadri/.npm-packages/bin/firebase deploy --only functions:sendMail
+[debug] [2017-10-30T20:24:17.755Z] CLI Version:   3.13.1
+[debug] [2017-10-30T20:24:17.755Z] Platform:      darwin
+[debug] [2017-10-30T20:24:17.755Z] Node Version:  v6.11.5
+[debug] [2017-10-30T20:24:17.756Z] Time:          Mon Oct 30 2017 17:24:17 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:17.756Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-10-30T20:24:17.778Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-10-30T20:24:17.779Z] > authorizing via signed-in user
+[debug] [2017-10-30T20:24:17.782Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/designweb-249da  
+ Mon Oct 30 2017 17:24:17 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:22.239Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-30T20:24:22.241Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/designweb-249da/tokens  
+ Mon Oct 30 2017 17:24:22 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:23.280Z] <<< HTTP RESPONSE 200
+[info] 1
+[info] 
+[info] === Deploying to 'designweb-249da'...
+[info] 
+[info] i  deploying functions
+[debug] [2017-10-30T20:24:26.514Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "~5.4.0",
+    "firebase-functions": "^0.7.0",
+    "nodemailer": "^4.3.1"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-10-30T20:24:26.517Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/designweb-249da?view=CONSUMER_VIEW  
+ Mon Oct 30 2017 17:24:26 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:26.518Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/designweb-249da?view=CONSUMER_VIEW  
+ Mon Oct 30 2017 17:24:26 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:27.920Z] <<< HTTP RESPONSE 200
+[info] ✔  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-10-30T20:24:28.004Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2017-10-30T20:24:28.007Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/designweb-249da  
+ Mon Oct 30 2017 17:24:28 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:28.007Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/designweb-249da/apiKeys  
+ Mon Oct 30 2017 17:24:28 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:29.114Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-30T20:24:29.252Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-10-30T20:24:37.286Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/designweb-249da/configs  
+ Mon Oct 30 2017 17:24:37 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:38.076Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-30T20:24:38.079Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/designweb-249da/configs/gmail/variables  
+ Mon Oct 30 2017 17:24:38 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:38.741Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-30T20:24:38.744Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/designweb-249da/configs/gmail/variables/email  
+ Mon Oct 30 2017 17:24:38 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:38.744Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/designweb-249da/configs/gmail/variables/password  
+ Mon Oct 30 2017 17:24:38 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:39.068Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-30T20:24:39.124Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (2.02 KB) for uploading
+[debug] [2017-10-30T20:24:47.986Z] >>> HTTP REQUEST GET https://www.googleapis.com/storage/v1/b/staging.designweb-249da.appspot.com  
+ Mon Oct 30 2017 17:24:47 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:48.490Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-30T20:24:48.491Z] >>> HTTP REQUEST POST https://www.googleapis.com/upload/storage/v1/b/staging.designweb-249da.appspot.com/o?uploadType=media&name=firebase-functions-source ReadStream {
+  _readableState: 
+   ReadableState {
+     objectMode: false,
+     highWaterMark: 65536,
+     buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+     length: 2072,
+     pipes: null,
+     pipesCount: 0,
+     flowing: null,
+     ended: true,
+     endEmitted: false,
+     reading: false,
+     sync: false,
+     needReadable: false,
+     emittedReadable: true,
+     readableListening: false,
+     resumeScheduled: false,
+     defaultEncoding: 'utf8',
+     ranOut: false,
+     awaitDrain: 0,
+     readingMore: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { end: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  path: '/var/folders/pp/gmgfwhds2n9fymy98c0yvkv40000gn/T/firebase-functions-23247MwQGBeubGabV.zip',
+  fd: 19,
+  flags: 'r',
+  mode: 438,
+  start: undefined,
+  end: undefined,
+  autoClose: true,
+  pos: undefined,
+  bytesRead: 2072 } 
+ Mon Oct 30 2017 17:24:48 GMT-0300 (-03)
+[debug] [2017-10-30T20:24:49.309Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: functions folder uploaded successfully
+[info] i  starting release process (may take several minutes)...
+[debug] [2017-10-30T20:24:49.316Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/projects/designweb-249da/locations/us-central1/functions  
+ Mon Oct 30 2017 17:24:49 GMT-0300 (-03)

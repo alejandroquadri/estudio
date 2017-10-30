@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # firebase
-/functions
+/functions/node_modules

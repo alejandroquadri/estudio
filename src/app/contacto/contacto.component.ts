@@ -1,6 +1,8 @@
 import { Component, OnInit, Renderer } from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 
+import { FormDataService } from '../shared';
+
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
@@ -17,6 +19,7 @@ export class ContactoComponent implements OnInit {
   constructor(
   	private renderer: Renderer,
   	private fb: FormBuilder,
+    private formData: FormDataService
 	) { 
 	}
 
@@ -34,6 +37,7 @@ export class ContactoComponent implements OnInit {
 
   submit(){
   	console.log(this.myForm.value);
+    this.formData.saveReq(this.myForm.value);
   	this.myForm.reset();
   }
 
