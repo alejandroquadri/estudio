@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark" [ngClass]="{'fixed-top': router.url === '/'}" style="background-color: hsla(0, 0%, 13%, 0.8);">
+<nav class="navbar navbar-expand-lg navbar-dark" [ngClass]="{'fixed-top landing': router.url === '/', 'notLanding': !(router.url === '/')}">
   <a class="navbar-brand" href="#" [hidden]="router.url === '/'">Queo</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
   aria-controls="navbarNav" [attr.aria-expanded]="!isExpanded" aria-label="Toggle navigation" (click)="isExpanded = !isExpanded">
