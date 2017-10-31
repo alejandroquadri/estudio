@@ -20,12 +20,52 @@
 		display: none;
 	}
 
+	.titles {
+		position: relative;
+	  top: 10%;
+	  left: 5%;
+	  color: white;
+	  font-weight: 100;
+	  line-height: 1.2;
+	  width: 90%;
+	}
+
+	.title {
+		font-size: 10rem;
+		color: white;
+	}
+
+	.subTitle {
+		font-size: 2rem;
+		width: 40%;
+	}
+
 }
 
 @media (max-width : 769px) {
 
 	.desktop {
 		display: none;
+	}
+
+	.titles {
+		position: relative;
+	  top: 10%;
+	  left: 5%;
+	  color: white;
+	  font-weight: 100;
+	  line-height: 1.2;
+	  width: 90%;
+	}
+
+	.title {
+		font-size: 6rem;
+		color: white;
+	}
+
+	.subTitle {
+		font-size: 1.7rem;
+		width: 80%;
 	}
 
 }
@@ -36,26 +76,13 @@
   background: transparent; 
 }
 
-.titles {
-	position: relative;
-  top: 10%;
-  left: 5%;
-  color: white;
-  font-weight: 100;
-  line-height: 1.2;
-  width: 90%;
+
+
+.terrazzo {
+	color: #FF00FF;
 }
 
-.title {
-	font-size: 10rem;
-}
-
-.subTitle {
-	font-size: 2.5rem;
-	width: 40%;
-}
-
-.parrafo {
-	font-size: 1.5rem;
-	width: 40%;
+.terrazzo:hover {
+	font-weight: 400;
+	text-decoration: none;
 }

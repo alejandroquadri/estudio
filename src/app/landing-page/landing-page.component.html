@@ -42,16 +42,15 @@ Como el template de cada slide se crea dinamicamente por el componente de ng-boo
   <div class="custom desktop" [ngStyle]="{'background-image': 'url(' + landingDesktop + ')'}">
     <div class="titles">
       <div class="title">Queo</div>
-      <div class="subTitle">diseño en terrazzo y concreto</div>
-      <!-- <div class="parrafo pt-3">
-      Elegancia clásica y audaz harán que su objeto sea único e irrepetible.
-      Terrazzo es un material fascinante compuesto de marmol, cuarzo, vidrio y cemento
-      Queo convierte el terrazzo en obras de arte atemporales, únicas e irrepetibles
-    </div> -->
+      <div class="subTitle pl-5 ml-5">diseño en <a class="terrazzo" [routerLink]="['/nosotros']">terrazzo</a></div>
     </div>
   </div>
   <div class="custom mobile" [ngStyle]="{'background-image': 'url(' + landingMobile + ')'}">
-    <h1 class="display-1 p-5">Queo</h1>
+    <!-- <h1 class="display-1 p-5">Queo</h1> -->
+    <div class="titles">
+      <div class="title">Queo</div>
+      <div class="subTitle pl-3">diseño en <a class="terrazzo" [routerLink]="['/nosotros']">terrazzo</a></div>
+    </div>
 
   </div>  
 </div>

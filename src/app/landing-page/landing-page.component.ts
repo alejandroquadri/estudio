@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Media } from '../shared';
 
@@ -20,7 +21,9 @@ export class LandingPageComponent implements OnInit {
 
 	@ViewChild('slide1') slide1 
 
-  constructor() {
+  constructor(
+    public router: Router
+  ) {
   }
 
   ngOnInit() {

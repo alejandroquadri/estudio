@@ -1,0 +1,58 @@
+.image {
+	/*height:100vh;*/
+	min-height: calc(100vh - 56px);
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+/*  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);*/
+}
+
+.texto {
+	/*min-height: 30vh;*/
+	width: 100%;
+	font-size: 1.7rem;
+  color: white;
+  font-weight: 100;
+}
+
+.divImg {
+	height: 80vh;
+	width: 45%;
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.text {
+	width: 35%;
+}
+
+.quadri {
+	color: white;
+}
+
+.quadri:hover {
+	color: #7F007F;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+@media (max-width : 415px) {
+	.text {
+		width:100%;
+	}
+
+	.divImg {
+		height: 35vh;
+		width: 100%;
+		background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	}
+
+	.headingMobile {
+		font-size: 3rem;
+	}
+}

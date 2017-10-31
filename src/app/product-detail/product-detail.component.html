@@ -13,14 +13,14 @@
   </div>
 </div> -->
 
-<div class="container d-flex align-items-md-stretch my-5">
-  <div class="w-50 d-flex">
-  	<div class="d-flex flex-column">
+<div class="container d-flex flex-column flex-md-row align-items-md-stretch my-sm-2 my-md-5">
+  <div class="d-flex">
+  	<div class="d-flex flex-column selector">
   		<div *ngFor="let img of detail.images ; let i = index">
   			<img [src]="img.url" (click)="detailCarousel.select(i)" alt="..." class="rounded thumbnail m-2">
   		</div>  		
   	</div>
-  	<div class="w-100">
+  	<div class="">
 	  	<ngb-carousel [interval]="0" (slide)="cambio($event)" #detailCarousel="ngbCarousel">
 			  <ng-template ngbSlide *ngFor="let img of detail.images; let i = index" [id]="i">
 			    <img [src]="img.url" class="img-fluid p-2 rounded" alt="Random first slide">
@@ -28,7 +28,7 @@
 			</ngb-carousel>
   	</div>
   </div>
-  <div class="w-50 p-4">
+  <div class="w-50 p-2 p-md-4 mobileWidth">
   	<div class="artName">{{ detail.name }}</div>
   	<div class="text-muted prize">{{ detail.prize | currency:'USD':true:'1.0-0' }}</div>
   	<app-colors [colorsObj]="detail.colors"></app-colors>

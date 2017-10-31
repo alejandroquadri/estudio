@@ -14,3 +14,15 @@
   font-weight: 400;
   line-height: 2;
 }
+
+@media (max-width : 415px) {
+	
+	.selector {
+		display: none !important;;
+	}
+
+	.mobileWidth {
+		width: 100% !important;
+	}
+
+}
