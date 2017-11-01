@@ -1,3 +1,7 @@
+.contenedor {
+	min-height: calc(100vh - 56px);
+}
+
 .sebm-google-map-container {
   height: 100%;
   width: 100%;
@@ -5,7 +9,6 @@
 
 .item {
 	width: 50%;
-	margin: auto; /* remover esta linea si quiero incluir el mapa */
 }
 
 .estilo {
