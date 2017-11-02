@@ -1,12 +1,36 @@
+.title {
+	color: #ddd;
+	font-size: 1rem;
+}
 
+.links {
+	color: black;
+}
 
 .texto {
 	background-color: hsl(0, 0%, 62%);
 	font-size: 0.8rem;
 }
 
+.social {
+	max-width: 33%;
+}
+
+.networks {
+	max-width: 2.5rem;
+}
+
 .nota {
 	color: #ddd;
-	font-size: 80%;
-  font-weight: normal;
+	font-size: 0.7rem;
+  font-weight: 100;
+}
+
+@media (max-width : 415px) {
+
+	.mobileWidth {
+		width: 100% !important;
+		max-width: 100%;
+	}
+
 }
