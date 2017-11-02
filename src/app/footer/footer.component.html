@@ -1,37 +1,40 @@
 
-<div class="texto d-flex flex-column flex-md-row justify-content-around p-2 p-md-3">
-	<div class="d-flex flex-column mb-2">
-		<div class="text-center pb-3 title">Contacto</div>
-		<div class="text-center">
-			<div><i class="fa fa-phone pr-1" aria-hidden="true"></i> 54 9 11 5161 2850</div>
-			<div><i class="fa fa-envelope-o pr-1" aria-hidden="true"></i><a style="color: #212529;" [href]="'mailto:info@queo.com.ar'">info@queo.com.ar</a></div>
-			<!-- <div class=""><small class="">Copyright © 2017 Queo</small></div> -->
-		</div>
-		
-		<!-- 
-		!! Lo siguiente es para agregar direccion
-		<div class="d-flex flex-wrap align-content-start">
-			<div class="d-inline-block pr-1"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-			<div class="d-inline-block pl-1">
-				Gascon 483 <br> Ciudad Autonoma de Buenos Aires <br> CP C1181ACG, Argentina
+<div class="container-fluid foot">
+	<div class=" row p-md-3">
+		<div class="col-md-4 d-flex flex-column mb-2">
+			<div class="text-center pb-3 title">Contacto</div>
+			<div class="text-center">
+				<div><i class="fa fa-phone pr-1" aria-hidden="true"></i> 54 9 11 5161 2850</div>
+				<div><i class="fa fa-envelope-o pr-1" aria-hidden="true"></i><a style="color: #212529;" [href]="'mailto:info@queo.com.ar'">info@queo.com.ar</a></div>
 			</div>
-		</div> -->
-	</div>
-	<div class="mb-2">
-		<div class="pb-3 text-center title">Links</div>
-		<div class="text-center">
-			<div><a class="links" [routerLink]="['/product']">Productos</a></div>
-			<div><a class="links" [routerLink]="['/nosotros']">Nosotros</a></div>
-			<div><a class="links" [routerLink]="['/contacto']">Contacto</a></div>
+			
+			<!-- 
+			!! Lo siguiente es para agregar direccion
+			<div class="d-flex flex-wrap align-content-start">
+				<div class="d-inline-block pr-1"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+				<div class="d-inline-block pl-1">
+					Gascon 483 <br> Ciudad Autonoma de Buenos Aires <br> CP C1181ACG, Argentina
+				</div>
+			</div> -->
+		</div>
+		<div class="col-md-4 mb-2">
+			<div class="pb-3 text-center title">Links</div>
+			<div class="text-center">
+				<div><a class="links" [routerLink]="['/product']">Productos</a></div>
+				<div><a class="links" [routerLink]="['/nosotros']">Nosotros</a></div>
+				<div><a class="links" [routerLink]="['/contacto']">Contacto</a></div>
+			</div>
+		</div>
+		<div class="col-md-4 d-flex flex-column social text-center mb-2 mobileWidth">
+			<div class="pb-3 text-center title">Encontranos</div>
+			<div class="d-flex justify-content-center">
+				<a href="https://www.facebook.com/queobsas/"><img class="img-fluid networks m-2" [src]="facebook"></a>
+				<a href="https://www.instagram.com/queobsas/"><img class="img-fluid networks m-2" [src]="instagram"></a>
+			</div>
 		</div>
 	</div>
-	<div class="d-flex flex-column social text-center mb-2 mobileWidth">
-		<div class="pb-3 text-center title">Encontranos</div>
-		<div class="d-flex justify-content-around">
-			<a href="https://www.facebook.com/queobsas/"><img class="img-fluid networks m-2" [src]="facebook"></a>
-			<a href="https://www.instagram.com/queobsas/"><img class="img-fluid networks m-2" [src]="instagram"></a>
-		</div>
+	<div class="row">
+		<div class="px-2 ml-auto nota">Copyright © 2017 Queo - web design by Maurito</div>
 	</div>
+	
 </div>
-<!-- <div class="texto px-2 ml-auto"><small class="nota">Copyright © 2017 Queo - web design by Maurito</small></div> -->
-<div class="texto px-2 text-right nota">Copyright © 2017 Queo - web design by Maurito</div>
