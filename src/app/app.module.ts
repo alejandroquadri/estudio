@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpModule } from '@angular/http';
 
@@ -35,6 +36,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     BrowserModule,
     HttpModule,
     rootRouting,
+    BrowserAnimationsModule,
     NgbModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,

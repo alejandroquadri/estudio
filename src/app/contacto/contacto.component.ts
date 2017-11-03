@@ -1,4 +1,11 @@
 import { Component, OnInit, Renderer } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 
 import { FormDataService } from '../shared';
@@ -6,13 +13,27 @@ import { FormDataService } from '../shared';
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
-  styleUrls: ['./contacto.component.scss']
+  styleUrls: ['./contacto.component.scss'],
+  animations: [
+    trigger('in', [
+      state('hide', style({
+        visibility: 'hidden',
+        opacity: 0
+      })),
+      state('show',   style({
+        visibility: 'visible',
+        opacity: 1
+      })),
+      transition('hide => show', animate('1000ms')),
+      transition('show => hide', animate('1000ms'))
+    ])
+  ]
 })
 export class ContactoComponent implements OnInit {
 
 	public myForm: FormGroup;
 
-  thanks = false;
+  thanks = 'hide';
 
 	title: string = 'My first AGM project';
   lat: number = -34.606176;
@@ -41,9 +62,9 @@ export class ContactoComponent implements OnInit {
   	console.log(this.myForm.value);
     this.formData.saveReq(this.myForm.value);
   	this.myForm.reset();
-    this.thanks = true;
+    this.thanks = 'show';
     setTimeout(() => {
-      this.thanks = false
+      this.thanks = 'hide'
     }, 5000);
   }
 

@@ -1,9 +1,25 @@
+.color {
+	cursor: pointer;
+}
+
 .divImg {
 	height: 50px;
 	width: 50px;
 	background-position: center;
   background-repeat: no-repeat;
   background-size: 400;
+}
+
+.modal-body {
+	display: flex;
+}
+
+.dark-modal .close {
+  color: white;   
+}
+
+.modalImg {
+
 }
 
 .colorText {
