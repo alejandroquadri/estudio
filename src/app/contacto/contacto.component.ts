@@ -12,6 +12,8 @@ export class ContactoComponent implements OnInit {
 
 	public myForm: FormGroup;
 
+  thanks = false;
+
 	title: string = 'My first AGM project';
   lat: number = -34.606176;
   lng: number = -58.424542;
@@ -39,6 +41,10 @@ export class ContactoComponent implements OnInit {
   	console.log(this.myForm.value);
     this.formData.saveReq(this.myForm.value);
   	this.myForm.reset();
+    this.thanks = true;
+    setTimeout(() => {
+      this.thanks = false
+    }, 5000);
   }
 
 }
