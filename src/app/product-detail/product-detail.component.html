@@ -1,33 +1,35 @@
-<!-- <div class="container d-flex align-items-md-stretch">
-  <div class="bg-primary w-50">
-  	<div>
-	  	<img [src]="image" class="img-fluid" alt="Responsive image">
-  	</div>
-  	<div>
-	  	<img *ngFor="let img of detail.img" [src]="img" (click)="changeImage(img)" alt="..." class="rounded thumbnail">
-  	</div>
-  </div>
-  <div class="bg-success w-50">
-  	<div>{{ detail.description }}</div>
-  	<div>{{ detail.prize }}</div>
-  </div>
-</div> -->
+<div class=" contenedor container d-flex flex-column flex-md-row my-sm-2">
+  
+  <!-- imagenes -->
+  <div #imagesDiv class="d-flex w-50 images mobileWidth">
 
-<div class="container d-flex flex-column flex-md-row align-items-md-stretch my-sm-2 my-md-5">
-  <div class="d-flex">
-  	<div class="d-flex flex-column selector">
-  		<div *ngFor="let img of detail.images ; let i = index">
-  			<img [src]="img.url" (click)="detailCarousel.select(i)" alt="..." class="rounded thumbnail m-2">
-  		</div>  		
+    <!-- selector -->
+  	<div class="d-flex flex-column selector selectorCont">
+      
+      <!-- <div class="arrow text-center"><i class="fa fa-caret-up" aria-hidden="true"></i></div> -->
+      
+      <div class="selector">
+        <div *ngFor="let img of detail.images ; let i = index" class="text-center">
+          <img [src]="img.url" (click)="detailCarousel.select(i)" alt="..." class="rounded thumbnail m-2">
+        </div>  
+      </div>
+      
+  		
+      <!-- <div class="arrow text-center"><i class="fa fa-caret-down" aria-hidden="true"></i></div>  		 -->
   	</div>
+
+    <!-- carousel -->
   	<div class="">
-	  	<ngb-carousel [interval]="0" (slide)="cambio($event)" #detailCarousel="ngbCarousel">
+	  	<ngb-carousel #carousel [interval]="0" (slide)="cambio($event)" #detailCarousel="ngbCarousel">
 			  <ng-template ngbSlide *ngFor="let img of detail.images; let i = index" [id]="i">
-			    <img [src]="img.url" class="img-fluid p-2 rounded" alt="Random first slide">
+			    <img #imageCar [src]="img.url" (window:resize)="setHeight()" class="img-fluid p-2 rounded" alt="Random first slide">
 			  </ng-template>
 			</ngb-carousel>
   	</div>
+    
   </div>
+
+  <!-- texto -->
   <div class="w-50 p-2 p-md-4 mobileWidth">
   	<div class="artName">{{ detail.name }}</div>
   	<div class="text-muted prize">{{ detail.prize | currency:'USD':true:'1.0-0' }}</div>
@@ -37,4 +39,5 @@
   		<li> {{ bullet }} </li>
   	</ul>
   </div>
+
 </div>

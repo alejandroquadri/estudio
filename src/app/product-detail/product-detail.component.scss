@@ -1,5 +1,23 @@
+.contenedor {
+	min-height: calc(100vh - 56px);
+}
+
+.images {
+	height: 50vh;
+}
+
+.selectorCont {
+	width: 20%;
+}
+
+.selector {
+	flex-grow: 1;
+  flex-shrink: 1;
+  // overflow: auto;
+}
+
 .thumbnail {
-	width: 100px;
+	width: 80%;
 	cursor: pointer;
 }
 
@@ -15,7 +33,13 @@
   line-height: 2;
 }
 
-@media (max-width : 415px) {
+.arrow {
+	height: 3rem;
+  font-size: 3rem;
+  line-height: 1rem;
+}
+
+@media (max-width : 900px) {
 	
 	.selector {
 		display: none !important;;

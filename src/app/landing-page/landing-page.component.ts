@@ -15,6 +15,7 @@ export class LandingPageComponent implements OnInit {
 	// carouselItems: any;
 	// active: any;
 
+  logo = "././assets/images/LogoBlanco.svg";
   landingDesktop = "./assets/images/landingDesktop.jpg";
   landingMobile = "./assets/images/landingMobile.jpg";
   triturado = "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/otros%2FtrituradoMarmol.jpeg?alt=media&token=7110942f-e9c3-458b-86db-ab90d070141a";

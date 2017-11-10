@@ -40,18 +40,18 @@ Como el template de cada slide se crea dinamicamente por el componente de ng-boo
 <!-- El div de abajo sirve en caso de querer usar de landing una imagen full screen -->
 <div class="carousel-wrapper d-flex">
   <div class="custom desktop" [ngStyle]="{'background-image': 'url(' + landingDesktop + ')'}">
-    <div class="titles">
+    <!-- <div class="titles">
       <div class="title">Queo</div>
       <div class="subTitle pl-5 ml-5">diseño en <a class="terrazzo" [routerLink]="['/nosotros']">terrazzo</a></div>
-    </div>
+    </div> -->
+    <img class="logo ml-4" [src]="logo">
   </div>
   <div class="custom mobile" [ngStyle]="{'background-image': 'url(' + landingMobile + ')'}">
-    <!-- <h1 class="display-1 p-5">Queo</h1> -->
-    <div class="titles">
+    <!-- <div class="titles">
       <div class="title">Queo</div>
       <div class="subTitle pl-5">diseño en <a class="terrazzo" [routerLink]="['/nosotros']">terrazzo</a></div>
-    </div>
-
-  </div>  
+    </div> -->
+    <img class="logo ml-4" [src]="logo">
+  </div> 
 </div>
 

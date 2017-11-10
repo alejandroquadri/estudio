@@ -41,7 +41,7 @@ export class ColorsComponent implements OnInit {
 
   open(content, img) {
     this.selectedImg = img
-    this.modalService.open(content, { size: 'sm' })
+    this.modalService.open(content)
     .result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
