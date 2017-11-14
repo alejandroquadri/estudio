@@ -56,4 +56,8 @@ export class LandingPageComponent implements OnInit {
 		// }, 50);
   // }
 
+  toProducts() {
+    this.router.navigate(['/product'])
+  }
+
 }

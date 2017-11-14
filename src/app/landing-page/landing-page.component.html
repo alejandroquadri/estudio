@@ -39,19 +39,29 @@ Como el template de cada slide se crea dinamicamente por el componente de ng-boo
 
 <!-- El div de abajo sirve en caso de querer usar de landing una imagen full screen -->
 <div class="carousel-wrapper d-flex">
+
   <div class="custom desktop" [ngStyle]="{'background-image': 'url(' + landingDesktop + ')'}">
-    <!-- <div class="titles">
-      <div class="title">Queo</div>
-      <div class="subTitle pl-5 ml-5">diseño en <a class="terrazzo" [routerLink]="['/nosotros']">terrazzo</a></div>
-    </div> -->
-    <img class="logo ml-4" [src]="logo">
+    <div class="titulos">
+      <img class="logo ml-4" [src]="logo">
+      <div class="oneliner">Diseñamos objetos y muebles en terrazzo para ayudarte a lograr espacios originales, elegantes y sofisticados</div>
+      <div class="botones">
+        <button type="button" class="btn btn-lg botonComprar" (click)= "toProducts()">Comprar</button>
+        <button type="button" class="ml-2 btn btn-lg btn-outline-secondary botonConocer">Conocer mas</button>
+      </div>
+    </div>
   </div>
+
   <div class="custom mobile" [ngStyle]="{'background-image': 'url(' + landingMobile + ')'}">
-    <!-- <div class="titles">
-      <div class="title">Queo</div>
-      <div class="subTitle pl-5">diseño en <a class="terrazzo" [routerLink]="['/nosotros']">terrazzo</a></div>
-    </div> -->
-    <img class="logo ml-4" [src]="logo">
+    <!-- <img class="logoMobile ml-4" [src]="logo"> -->
+    <div class="titulosMobile">
+      <img class="logoMobile ml-4" [src]="logo">
+      <div class="onelinerMobile">Diseñamos objetos en terrazzo para ayudarte a lograr espacios originales y sofisticados</div>
+    </div>
+    <div class="botonesMobile">
+      <button type="button" class="btn btn-lg botonComprar" (click)= "toProducts()">Comprar</button>
+      <button type="button" class="ml-2 btn btn-lg btn-outline-secondary botonConocer">Conocer mas</button>
+    </div>
   </div> 
+
 </div>
 
