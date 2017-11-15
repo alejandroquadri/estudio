@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 
 import { Media, ProductDetailService } from '../shared';
 
@@ -17,16 +18,20 @@ export class ProductDetailComponent implements OnInit {
   @ViewChild('imagesDiv') imagesDiv: ElementRef;
   carouselEl: any
 
+  public myForm: FormGroup;
+
   constructor(
   	private route: ActivatedRoute,
     private router: Router,
     private detailService: ProductDetailService,
-    private renderer: Renderer
+    private renderer: Renderer,
+    private fb: FormBuilder,
   ) { 
 
   }
 
   ngOnInit() {
+    this.buildForm();
   	this.route.params.forEach((params: any) => {
       this.ruta = params['id'];
     });
@@ -53,6 +58,13 @@ export class ProductDetailComponent implements OnInit {
 
   cambio(event) {
   	console.log(event);
+  }
+
+  buildForm() {
+    this.myForm = this.fb.group({
+      quantity: [1, Validators.required],
+      color: ['', Validators.required],
+    });
   }
 
 }

@@ -22,7 +22,7 @@ export class ProductDataService {
   }
 
   getColors() {
-  	return this.fApi.getObject('colors');
+  	return this.fApi.getList('colors');
   }
 
 }

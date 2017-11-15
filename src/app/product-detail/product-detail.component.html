@@ -34,24 +34,23 @@
   	<div class="artName">{{ detail.name }}</div>
   	<div class="text-muted prize">{{ detail.prize | currency:'USD':true:'1.0-0' }}</div>
 
-    <form class="form-inline">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Cantidad</label>
-        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+      <div class="row m-2">
+        <div class="col-3 d-flex"><label class="align-self-center" for="cantidad">Cantidad</label></div>
+        <div class="col-9"><input formControlName="quantity" type="number" class="form-control" id="cantidad"></div>
       </div>
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Color</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
+      <div class="row m-2">
+        <div class="col-3 d-flex"><label class="align-self-center" for="color">Color</label></div>
+        <div class="col-9">
+          <select class="form-control" id="color" formControlName="color">
+            <option disabled value="">Seleccionar color</option>
+            <option *ngFor="let color of detail.colors">{{ color }}</option>
+          </select>
+        </div>
       </div>
+      <button [disabled]="!myForm.valid" type="button" type="submit" class="btn btn-lg botonComprar mt-3 mr-3 mb-4" (click)= "toProducts()">Comprar</button>
     </form>
     
-    <button type="button" class="btn btn-lg botonComprar mt-3 mr-3 mb-4" (click)= "toProducts()">Comprar</button>
   	<app-colors [colorsObj]="detail.colors"></app-colors>
   	<p class="pt-4"> {{ detail.descripcion }} </p>
   	<ul *ngFor="let bullet of detail.bullets">

@@ -7,7 +7,7 @@
 		<!-- <div class=""> {{ serie | capitalize }} </div> -->
 
 		<div class="d-flex flex-wrap align-content-start">
-		  <div *ngFor="let color of colors[serie]" class="color justify-content-center px-2" (click)="open(content, color.url)">
+		  <div *ngFor="let color of colors[serie]" class="color justify-content-center px-2" (click)="open(content, color)">
 				<div class="divImg rounded-circle p-2 m-auto" [ngStyle]="{'background-image': 'url(' + color.url + ')'}"></div>
 				<div  class="colorText text-center p-1">{{ color.name }}</div>
 			</div>
@@ -17,8 +17,9 @@
 </div>
 
 <ng-template #content let-c="close" let-d="dismiss">
-  <div class="modal-body">
-    <img class="rounded img-fluid mx-auto" [src]="selectedImg">
+  <div class="modal-body d-flex flex-column">
+    <img class="rounded img-fluid modalImg" [src]="selectedImg">
+    <div class="modalText mt-2">{{ selectedName }}</div>
   </div>
 <!--   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>

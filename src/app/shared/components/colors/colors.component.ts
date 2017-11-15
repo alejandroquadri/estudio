@@ -16,6 +16,7 @@ export class ColorsComponent implements OnInit {
   closeResult: string;
 
   selectedImg: any;
+  selectedName:any;
 
   constructor(
   	private prodService: ProductDataService,
@@ -25,7 +26,8 @@ export class ColorsComponent implements OnInit {
   ngOnInit() {
   	this.colorsObs = this.prodService.getColors()
   	this.colorsObs.subscribe( colors => {
-      this.filterColorFamily(colors);
+      // this.filterColorFamily(colors);
+      this.filterColor(colors);
   	});
   }
 
@@ -39,8 +41,27 @@ export class ColorsComponent implements OnInit {
     this.colors = colors;
   }
 
-  open(content, img) {
-    this.selectedImg = img
+  filterColor(colors: any) {
+    console.log(colors);
+    let filteredColors = colors.filter( (color: any) => {
+      return (this.colorsObj.indexOf(color.name) !== -1)
+    })
+    this.colors = {};
+    console.log(this.colorsObj, filteredColors);
+    filteredColors.forEach( color => {
+      if (this.colors[color.family]) {
+        this.colors[color.family].push(color);
+      } else {
+        this.colors[color.family] = [];
+        this.colors[color.family].push(color);
+      }
+    })
+    console.log(this.colors);
+  }
+
+  open(content, color) {
+    this.selectedImg = color.url;
+    this.selectedName = color.name;
     this.modalService.open(content)
     .result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
