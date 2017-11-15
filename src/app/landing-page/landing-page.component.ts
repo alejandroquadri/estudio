@@ -60,4 +60,8 @@ export class LandingPageComponent implements OnInit {
     this.router.navigate(['/product'])
   }
 
+  more() {
+    this.router.navigate(['/nosotros'])
+  }
+
 }

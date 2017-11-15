@@ -59,6 +59,7 @@
 	color: white;
 	background-color: hsla(290, 100%, 50%, 1);
 	border-color: hsla(290, 100%, 50%, 1);
+	cursor: pointer;
 }
 
 .botonComprar:active {
@@ -71,6 +72,10 @@
 .botonConocer {
 	color: white;
 	border-color: white;
+}
+
+.botonConocer:hover {
+	cursor: pointer;
 }
 
 .titulosMobile {
@@ -93,7 +98,7 @@
   position: relative;
   top: 1em;
   left: 10%;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 100;
   line-height: 1.5;
 }

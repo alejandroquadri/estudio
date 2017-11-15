@@ -43,10 +43,10 @@ Como el template de cada slide se crea dinamicamente por el componente de ng-boo
   <div class="custom desktop" [ngStyle]="{'background-image': 'url(' + landingDesktop + ')'}">
     <div class="titulos">
       <img class="logo ml-4" [src]="logo">
-      <div class="oneliner">Diseñamos objetos y muebles en terrazzo para ayudarte a lograr espacios originales, elegantes y sofisticados</div>
+      <div class="oneliner">Diseñamos objetos y muebles en terrazzo para que logres espacios originales, elegantes y sofisticados</div>
       <div class="botones">
         <button type="button" class="btn btn-lg botonComprar" (click)= "toProducts()">Comprar</button>
-        <button type="button" class="ml-2 btn btn-lg btn-outline-secondary botonConocer">Conocer mas</button>
+        <button type="button" class="ml-2 btn btn-lg btn-outline-secondary botonConocer" (click)= "more()">Conocer mas</button>
       </div>
     </div>
   </div>
@@ -55,11 +55,11 @@ Como el template de cada slide se crea dinamicamente por el componente de ng-boo
     <!-- <img class="logoMobile ml-4" [src]="logo"> -->
     <div class="titulosMobile">
       <img class="logoMobile ml-4" [src]="logo">
-      <div class="onelinerMobile">Diseñamos objetos en terrazzo para ayudarte a lograr espacios originales y sofisticados</div>
+      <div class="onelinerMobile">Diseñamos objetos en terrazzo para que logres espacios originales y sofisticados</div>
     </div>
     <div class="botonesMobile">
       <button type="button" class="btn btn-lg botonComprar" (click)= "toProducts()">Comprar</button>
-      <button type="button" class="ml-2 btn btn-lg btn-outline-secondary botonConocer">Conocer mas</button>
+      <button type="button" class="ml-2 btn btn-lg btn-outline-secondary botonConocer" (click)= "more()">Conocer mas</button>
     </div>
   </div> 
 
