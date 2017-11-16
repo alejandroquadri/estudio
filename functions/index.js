@@ -17,28 +17,50 @@ const mailTransport = nodemailer.createTransport(`smtps://${gmailEmail}:${gmailP
 // 
 
 exports.sendMail = functions.database.ref('/queries/{pushId}')
-    .onWrite(event => {
-    	console.log(event);
-    	const snapshot = event.data;
-		  const val = snapshot.val();
+.onWrite(event => {
+	console.log(event);
+	const snapshot = event.data;
+  const val = snapshot.val();
 
-		  // if (!snapshot.changed('subscribedToMailingList')) {
-		  //   return;
-		  // }
+  // if (!snapshot.changed('subscribedToMailingList')) {
+  //   return;
+  // }
 
-		  const mailOptions = {
-		    from: '"Queo" <noreply@queo.com.ar>',
-		    to: 'ale@quadri.com.ar',
-		    subject: 'Consulta desde queo.com.ar',
-		    text : `${val.name} - ${val.email}\n${val.query}`
-		  };
+  const mailOptions = {
+    from: '"Queo" <noreply@queo.com.ar>',
+    to: 'ale@quadri.com.ar',
+    subject: 'Consulta desde queo.com.ar',
+    text : `${val.name} - ${val.email}\n${val.query}`
+  };
 
-		  return mailTransport.sendMail(mailOptions).then(() => {
-		      console.log('New query sent');
-		    }).catch(error => {
-		      console.error('There was an error while sending the email:', error);  
-		    });
+  return mailTransport.sendMail(mailOptions).then(() => {
+      console.log('New query sent');
+    }).catch(error => {
+      console.error('There was an error while sending the email:', error);  
     });
+});
+
+exports.sendMailOrder = functions.database.ref('/orders/{pushId}')
+.onWrite(event => {
+	console.log(event);
+	const snapshot = event.data;
+  const val = snapshot.val();
+
+  const mailOptions = {
+    from: '"Queo" <noreply@queo.com.ar>',
+    to: 'ale@quadri.com.ar',
+    subject: 'Nueva compra desde queo.com.ar',
+    text : `${val.client.name} - ${val.client.email} - ${val.client.telephone}\n
+    \n
+    Compro: ${val.quantity} ${val.product} ${val.color} a ${val.prize}`
+  };
+
+  return mailTransport.sendMail(mailOptions).then(() => {
+      console.log('New order sent');
+    }).catch(error => {
+      console.error('There was an error while sending the email:', error);  
+    });
+});
 
 
     // Take the text parameter passed to this HTTP endpoint and insert it into the

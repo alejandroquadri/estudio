@@ -39,8 +39,16 @@ export class BuyModalComponent implements OnInit {
   submit() {
   	this.thanks = true;
   	this.datos['client'] = this.myForm.value;
-  	console.log(this.datos);
-    // this.formData.saveReq(this.myForm.value);
+  	let form = {
+  		product: this.datos.name,
+  		client: this.myForm.value,
+  		quantity: this.datos.bought.quantity,
+  		color: this.datos.bought.color,
+  		prize: this.datos.prize,
+  		fullfilled: false
+  	}
+  	console.log(this.datos, form);
+    this.formData.addOrder(form);
   	this.myForm.reset();
   }
 

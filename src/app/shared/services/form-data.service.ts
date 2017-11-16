@@ -13,4 +13,8 @@ export class FormDataService {
 		return this.fApi.push('queries', form);
 	}
 
+	addOrder(form: any) {
+		return this.fApi.push('orders', form);
+	}
+
 }
