@@ -9,6 +9,7 @@ import { SubNavbarComponent } from './components';
 import { CapitalizePipe } from './pipes';
 import { ObjNgforPipe } from './pipes';
 import { ColorsComponent } from './components/colors/colors.component';
+import { BuyModalComponent } from './components/buy-modal/buy-modal.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { ColorsComponent } from './components/colors/colors.component';
   	SubNavbarComponent,
     CapitalizePipe,
     ObjNgforPipe,
-    ColorsComponent
+    ColorsComponent,
+    BuyModalComponent
   ],
   providers: [
   ],
@@ -38,6 +40,7 @@ import { ColorsComponent } from './components/colors/colors.component';
     ColorsComponent,
     CapitalizePipe,
     ObjNgforPipe,
+    BuyModalComponent
 	]
 })
 export class SharedModule { }

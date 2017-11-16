@@ -20,7 +20,7 @@
 
     <!-- carousel -->
   	<div class="">
-	  	<ngb-carousel #carousel [interval]="0" (slide)="cambio($event)" #detailCarousel="ngbCarousel">
+	  	<ngb-carousel #carousel [interval]="0" #detailCarousel="ngbCarousel">
 			  <ng-template ngbSlide *ngFor="let img of detail.images; let i = index" [id]="i">
 			    <img #imageCar [src]="img.url" (window:resize)="setHeight()" class="img-fluid p-2 rounded" alt="Random first slide">
 			  </ng-template>
@@ -35,20 +35,34 @@
   	<div class="text-muted prize">{{ detail.prize | currency:'USD':true:'1.0-0' }}</div>
 
     <form [formGroup]="myForm" (ngSubmit)="submit()">
+
       <div class="row m-2">
         <div class="col-3 d-flex"><label class="align-self-center" for="cantidad">Cantidad</label></div>
-        <div class="col-9"><input formControlName="quantity" type="number" class="form-control" id="cantidad"></div>
+        <div class="col-9">
+          <input formControlName="quantity" type="number" class="form-control" id="cantidad"
+          [ngClass]="{'missing': myForm.controls.quantity.invalid && (myForm.controls.quantity.dirty || myForm.controls.quantity.touched)}">
+        </div>
+        <div *ngIf="myForm.controls.quantity.invalid && (myForm.controls.quantity.dirty || myForm.controls.quantity.touched)">
+          <div *ngIf="myForm.controls.quantity.errors.required">
+            <ngb-alert [dismissible]="false" [type]="'light'">
+              Por favor, indicanos que cantidad necesitas
+            </ngb-alert>
+          </div>
+        </div>
       </div>
+
+      
       <div class="row m-2">
         <div class="col-3 d-flex"><label class="align-self-center" for="color">Color</label></div>
         <div class="col-9">
-          <select class="form-control" id="color" formControlName="color">
+          <select class="form-control"  id="color" formControlName="color"
+          [ngClass]="{'text-muted':myForm.controls.color.value === ''}">
             <option disabled value="">Seleccionar color</option>
             <option *ngFor="let color of detail.colors">{{ color }}</option>
           </select>
         </div>
       </div>
-      <button [disabled]="!myForm.valid" type="button" type="submit" class="btn btn-lg botonComprar mt-3 mr-3 mb-4" (click)= "toProducts()">Comprar</button>
+      <button [disabled]="!myForm.valid" type="button" type="submit" class="btn btn-lg botonComprar mt-3 mr-3 mb-4">Comprar</button>
     </form>
     
   	<app-colors [colorsObj]="detail.colors"></app-colors>

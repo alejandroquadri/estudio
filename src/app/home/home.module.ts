@@ -11,6 +11,7 @@ import { NosotrosComponent } from '../nosotros/nosotros.component';
 import { ContactoComponent } from '../contacto/contacto.component';
 import { ProductPageComponent } from '../product-page/product-page.component';
 import { ProductDetailComponent } from '../product-detail/product-detail.component';
+import { BuyModalComponent } from '../shared';
 
 const homeRouting: ModuleWithProviders = RouterModule.forChild([
   { 
@@ -44,6 +45,9 @@ const homeRouting: ModuleWithProviders = RouterModule.forChild([
 	  homeRouting,
     SharedModule,
     TerrazzoModule
+  ],
+  entryComponents: [
+    BuyModalComponent,
   ],
   declarations: [
 	  HomeComponent,

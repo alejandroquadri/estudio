@@ -1,0 +1,76 @@
+<div class="modal-header" *ngIf="!thanks">
+  <h4 class="titulo">Confirmacion compra</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+	
+	<div class="producto" *ngIf="!thanks">
+		<div class="text-muted">Tu compra:</div>
+	  <div class="detalleProducto">{{ datos.bought.quantity }} {{ datos.name }} color {{ datos.bought.color }}</div>
+	</div>
+
+	<div class="thanks" *ngIf="thanks">
+		<img class="" [src]="logo">
+		<div class="p-3 pt-5 titulo text-center">
+			Muchas gracias por tu compra, en breve nos estaremos comunicando			
+		</div>
+	</div>
+
+</div>
+
+<div class="modal-footer" *ngIf="!thanks">
+  <div class="textoConfirmacion my-3">Confirmanos tus datos y nos comunicaremos para coordinar el envio y pago</div>
+
+  <form [formGroup]="myForm" novalidate (ngSubmit)="submit()">
+
+		<div class="form-group">
+	    <label class="text-muted" for="nombre">Nombre</label>
+	    <input type="text" formControlName="name" class="form-control form-control-lg"
+	    [ngClass]="{'missing': myForm.controls.name.invalid && (myForm.controls.name.dirty || myForm.controls.name.touched)}">
+
+	    <!-- indicacion que falta el nombre -->
+	    <div *ngIf="myForm.controls.name.invalid && (myForm.controls.name.dirty || myForm.controls.name.touched)">
+        <div *ngIf="myForm.controls.name.errors.required">
+          <ngb-alert [dismissible]="false" [type]="'light'">
+            ¡Nos falta tu nombre!
+          </ngb-alert>
+        </div>
+      </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label class="text-muted" for="tel">Telefono</label>
+	    <input type="tel" formControlName="telephone" class="form-control form-control-lg"
+	    [ngClass]="{'missing': myForm.controls.telephone.invalid && (myForm.controls.telephone.dirty || myForm.controls.telephone.touched)}">
+	     <div *ngIf="myForm.controls.telephone.invalid && (myForm.controls.telephone.dirty || myForm.controls.telephone.touched)">
+        <div *ngIf="myForm.controls.telephone.errors.required">
+          <ngb-alert [dismissible]="false" [type]="'light'">
+            Necesitamos saber tu numero de telefono para contactarte
+          </ngb-alert>
+        </div>
+      </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label class="text-muted" for="email">E-mail</label>
+	    <input type="e-mail" formControlName="email" class="form-control form-control-lg" id="email" aria-describedby="emailHelp"
+	    [ngClass]="{'missing': myForm.controls.email.invalid && (myForm.controls.email.dirty || myForm.controls.email.touched)}">
+	    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email</small>
+	     <div *ngIf="myForm.controls.email.invalid && (myForm.controls.email.dirty || myForm.controls.email.touched)">
+        <div *ngIf="myForm.controls.email.errors.required">
+          <ngb-alert [dismissible]="false" [type]="'light'">
+            Necesitamos saber tu e-mail para contactarte
+          </ngb-alert>
+        </div>
+      </div>
+	  </div>
+
+  	<button [disabled]="!myForm.valid" type="submit" class="btn botonComprar mr-3 align-self-start">Confirmar Compra</button>
+  	<button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cancelar</button>
+
+	</form>
+
+</div>

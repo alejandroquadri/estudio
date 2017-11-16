@@ -25,7 +25,6 @@ export class ProductPageComponent implements OnInit {
   ) { 
   	this.images = Media.design;
   	this.innerWidth = window.screen.width;
-  	console.log(this.innerWidth);
   }
 
   ngOnInit() {
@@ -37,7 +36,6 @@ export class ProductPageComponent implements OnInit {
 
   onResize(event) {
   	this.innerWidth = event.target.innerWidth;
-  	console.log(window.screen.width, event.target.innerWidth, this.innerWidth, this.innerWidth < 576);
   }
 
   navigate(route: string, detail: any) {

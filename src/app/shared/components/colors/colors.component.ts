@@ -42,12 +42,10 @@ export class ColorsComponent implements OnInit {
   }
 
   filterColor(colors: any) {
-    console.log(colors);
     let filteredColors = colors.filter( (color: any) => {
       return (this.colorsObj.indexOf(color.name) !== -1)
     })
     this.colors = {};
-    console.log(this.colorsObj, filteredColors);
     filteredColors.forEach( color => {
       if (this.colors[color.family]) {
         this.colors[color.family].push(color);
@@ -56,7 +54,6 @@ export class ColorsComponent implements OnInit {
         this.colors[color.family].push(color);
       }
     })
-    console.log(this.colors);
   }
 
   open(content, color) {

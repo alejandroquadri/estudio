@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
+import { Validators, FormGroup, FormArray, FormBuilder, FormControl } from '@angular/forms';
 
-import { Media, ProductDetailService } from '../shared';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
+import { Media, ProductDetailService, BuyModalComponent } from '../shared';
 
 @Component({
   selector: 'app-product-detail',
@@ -26,6 +28,7 @@ export class ProductDetailComponent implements OnInit {
     private detailService: ProductDetailService,
     private renderer: Renderer,
     private fb: FormBuilder,
+    private modalService: NgbModal
   ) { 
 
   }
@@ -36,35 +39,30 @@ export class ProductDetailComponent implements OnInit {
       this.ruta = params['id'];
     });
   	this.detail = this.detailService.detail;
-  	console.log(this.detail);
   	this.image = this.detail.images[0].url;
   }
 
   ngAfterViewInit () {
-    console.log(this.imageCar.nativeElement.offsetHeight);
-    console.log(this.imagesDiv, this.imagesDiv.nativeElement);
     this.setHeight();
   }
 
   setHeight() {
-    console.log('corre set height');
     this.renderer.setElementStyle(this.imagesDiv.nativeElement, 'height', `${this.imageCar.nativeElement.offsetHeight}px`);
-  }
-
-  changeImage(img) {
-  	console.log(img);
-  	// this.image = img;
-  }
-
-  cambio(event) {
-  	console.log(event);
   }
 
   buildForm() {
     this.myForm = this.fb.group({
-      quantity: [1, Validators.required],
-      color: ['', Validators.required],
+      quantity: new FormControl(1, Validators.required),
+      color: new FormControl('', Validators.required),
     });
+  }
+
+  submit() {
+    console.log(this.myForm);
+    let artBought = this.detail;
+    artBought['bought'] = this.myForm.value;
+    const modalRef = this.modalService.open(BuyModalComponent, {size: 'lg'});
+    modalRef.componentInstance.data = JSON.stringify(artBought);
   }
 
 }
