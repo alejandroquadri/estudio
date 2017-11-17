@@ -58,7 +58,6 @@
 	    <label class="text-muted" for="email">E-mail</label>
 	    <input type="e-mail" formControlName="email" class="form-control form-control-lg" id="email" aria-describedby="emailHelp"
 	    [ngClass]="{'missing': myForm.controls.email.invalid && (myForm.controls.email.dirty || myForm.controls.email.touched)}">
-	    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email</small>
 	     <div *ngIf="myForm.controls.email.invalid && (myForm.controls.email.dirty || myForm.controls.email.touched)">
         <div *ngIf="myForm.controls.email.errors.required">
           <ngb-alert [dismissible]="false" [type]="'light'">
@@ -68,8 +67,13 @@
       </div>
 	  </div>
 
-  	<button [disabled]="!myForm.valid" type="submit" class="btn botonComprar mr-3 align-self-start">Confirmar Compra</button>
-  	<button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cancelar</button>
+	  <div class="form-group">
+	    <label class="text-muted" for="textArea">Observaciones</label>
+	    <textarea formControlName="obs" class="form-control form-control-lg" id="textArea" rows="3"></textarea>
+	  </div>
+
+  	<button [disabled]="!myForm.valid" type="submit" class="btn btn-lg botonComprar mr-3 align-self-start">Confirmar Compra</button>
+  	<button type="button" class="btn btn-lg btn-outline-dark" (click)="activeModal.close('Close click')">Cancelar</button>
 
 	</form>
 

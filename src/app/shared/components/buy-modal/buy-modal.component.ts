@@ -32,7 +32,8 @@ export class BuyModalComponent implements OnInit {
   	this.myForm = this.fb.group({
     	name: ['', Validators.required],
     	telephone: ['', Validators.required],
-    	email: ['', Validators.required]
+    	email: ['', Validators.required],
+    	obs: ['', Validators.required]
     });
   }
 
