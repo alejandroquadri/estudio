@@ -47,7 +47,14 @@ export class ProductDetailComponent implements OnInit {
   }
 
   setHeight() {
-    this.renderer.setElementStyle(this.imagesDiv.nativeElement, 'height', `${this.imageCar.nativeElement.offsetHeight}px`);
+    let w = window.innerWidth; // esto te da el ancho de la pantalla
+    if (w > 900) {
+      // hago que el div contenedor de el carrousel tenga el algo del carrousel. Esto es para que el div contenedor de las imagenes queden de la misma atura
+      this.renderer.setElementStyle(this.imagesDiv.nativeElement, 'height', `${this.imageCar.nativeElement.offsetHeight}px`);
+    } else {
+      // para moviles, que el espacio contenedor sea del 100%. El selector no esta
+      this.renderer.setElementStyle(this.imagesDiv.nativeElement, 'height', `100%`);
+    }
   }
 
   buildForm() {
