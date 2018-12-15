@@ -31,37 +31,37 @@ import { FormDataService } from '../shared';
 })
 export class ContactoComponent implements OnInit {
 
-	public myForm: FormGroup;
+  public myForm: FormGroup;
 
   thanks = 'hide';
 
-	title: string = 'My first AGM project';
+  title: string = 'My first AGM project';
   lat: number = -34.606176;
   lng: number = -58.424542;
 
   constructor(
-  	private renderer: Renderer,
-  	private fb: FormBuilder,
+    private renderer: Renderer,
+    private fb: FormBuilder,
     private formData: FormDataService
-	) { 
-	}
+  ) {
+  }
 
   ngOnInit() {
-  	this.buildForm();
+    this.buildForm();
   }
 
   buildForm() {
-  	this.myForm = this.fb.group({
-    	name: ['', Validators.required],
-    	email: ['', Validators.required],
-    	query: ['', Validators.required],
+    this.myForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', Validators.required],
+      query: ['', Validators.required],
     });
   }
 
   submit(){
-  	console.log(this.myForm.value);
+    console.log(this.myForm.value);
     this.formData.saveReq(this.myForm.value);
-  	this.myForm.reset();
+    this.myForm.reset();
     this.thanks = 'show';
     setTimeout(() => {
       this.thanks = 'hide'

@@ -22,7 +22,7 @@ import { BuyModalComponent } from './components/buy-modal/buy-modal.component';
     ReactiveFormsModule,
   ],
   declarations: [
-  	SubNavbarComponent,
+    SubNavbarComponent,
     CapitalizePipe,
     ObjNgforPipe,
     ColorsComponent,
@@ -30,8 +30,8 @@ import { BuyModalComponent } from './components/buy-modal/buy-modal.component';
   ],
   providers: [
   ],
-	exports: [
-		CommonModule,
+  exports: [
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
@@ -41,6 +41,6 @@ import { BuyModalComponent } from './components/buy-modal/buy-modal.component';
     CapitalizePipe,
     ObjNgforPipe,
     BuyModalComponent
-	]
+  ]
 })
 export class SharedModule { }

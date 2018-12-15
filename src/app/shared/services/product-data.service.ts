@@ -6,23 +6,23 @@ import { FirebaseApiService } from './firebase-api.service';
 export class ProductDataService {
 
   constructor(
-  	private fApi: FirebaseApiService
+    private fApi: FirebaseApiService
   ) { }
 
   getProductData() {
-  	return this.fApi.getObject('products');
+    return this.fApi.getObject('products');
   }
 
   getProductList() {
-  	return this.fApi.getList('products');
+    return this.fApi.getList('products');
   }
 
   getProductListS() {
-  	return this.fApi.getListSnap('products');
+    return this.fApi.getListSnap('products');
   }
 
   getColors() {
-  	return this.fApi.getList('colors');
+    return this.fApi.getList('colors');
   }
 
 }

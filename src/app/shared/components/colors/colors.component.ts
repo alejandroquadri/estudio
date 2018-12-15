@@ -1,50 +1,50 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { NgbModal, NgbActiveModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+  import { Component, OnInit, Input } from '@angular/core';
+  import { NgbModal, NgbActiveModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
-import { ProductDataService } from '../../services/product-data.service';
+  import { ProductDataService } from '../../services/product-data.service';
 
-@Component({
+  @Component({
   selector: 'app-colors',
   templateUrl: './colors.component.html',
   styleUrls: ['./colors.component.scss']
-})
-export class ColorsComponent implements OnInit {
+  })
+  export class ColorsComponent implements OnInit {
 
-	colorsObs: any;
-	colors: any;
+  colorsObs: any;
+  colors: any;
   @Input() colorsObj: any;
   closeResult: string;
 
   selectedImg: any;
-  selectedName:any;
+  selectedName: any;
 
   constructor(
-  	private prodService: ProductDataService,
+    private prodService: ProductDataService,
     private modalService: NgbModal
-	) { }
+  ) { }
 
   ngOnInit() {
-  	this.colorsObs = this.prodService.getColors()
-  	this.colorsObs.subscribe( colors => {
+    this.colorsObs = this.prodService.getColors();
+    this.colorsObs.subscribe( colors => {
       // this.filterColorFamily(colors);
       this.filterColor(colors);
-  	});
+    });
   }
 
   filterColorFamily(colors: any) {
     if (!this.colorsObj.cemento) {
-      delete colors.cemento
+      delete colors.cemento;
     }
     if (!this.colorsObj.granitico) {
-      delete colors.granitico
+      delete colors.granitico;
     }
     this.colors = colors;
   }
 
   filterColor(colors: any) {
-    let filteredColors = colors.filter( (color: any) => {
-      return (this.colorsObj.indexOf(color.name) !== -1)
-    })
+    const filteredColors = colors.filter( (color: any) => {
+      return (this.colorsObj.indexOf(color.name) !== -1);
+    });
     this.colors = {};
     filteredColors.forEach( color => {
       if (this.colors[color.family]) {
@@ -53,7 +53,7 @@ export class ColorsComponent implements OnInit {
         this.colors[color.family] = [];
         this.colors[color.family].push(color);
       }
-    })
+    });
   }
 
   open(content, color) {
@@ -78,5 +78,5 @@ export class ColorsComponent implements OnInit {
   }
 
 
-}
+  }
 

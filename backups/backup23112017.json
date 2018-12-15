@@ -1,0 +1,184 @@
+{
+  "colors" : [ {
+    "family" : "cemento",
+    "name" : "Plata",
+    "orden" : 0,
+    "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/colors%2FGrisCemento.jpg?alt=media&token=bf7975a9-28e0-41f2-a1bf-42173efa5ffe"
+  }, {
+    "family" : "cemento",
+    "name" : "Antracita",
+    "orden" : 0,
+    "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/colors%2FNegroCemento.jpg?alt=media&token=10761666-c124-453c-8a67-fe2ab7633527"
+  }, {
+    "family" : "granitico",
+    "name" : "Dalmata",
+    "orden" : 0,
+    "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/colors%2FB%20Espuma.jpg?alt=media&token=997a5d4b-a315-46e8-83a2-b653bc727254"
+  }, {
+    "family" : "granitico",
+    "name" : "Natural",
+    "orden" : 0,
+    "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/colors%2FBlanco.jpg?alt=media&token=5ab8f3c5-f218-4fae-846b-fdb5aa355226"
+  }, {
+    "family" : "granitico",
+    "name" : "Gris",
+    "orden" : 0,
+    "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/colors%2FBrechiato.jpg?alt=media&token=98e12940-ccf1-4f15-968d-873ffcc9e2b7"
+  }, {
+    "family" : "granitico",
+    "name" : "Plomo",
+    "orden" : 0,
+    "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/colors%2FGris%20Plomo2.jpg?alt=media&token=822499c7-59f1-4377-b49e-e4eeeafa0d9e"
+  }, {
+    "family" : "granitico",
+    "name" : "Rosa",
+    "orden" : 0,
+    "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/colors%2FRosa.jpg?alt=media&token=1a3e856e-07b1-4ea2-af51-504174718a51"
+  }, {
+    "family" : "granitico",
+    "name" : "Negro",
+    "orden" : 0,
+    "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/colors%2FVerde%20Alpe.jpg?alt=media&token=3841faff-6f5b-4cf7-83df-5fe69e0f6f06"
+  } ],
+  "orders" : {
+    "-Kz5T45RSZ4H3fWluL8R" : {
+      "client" : {
+        "email" : "ale@quadri.com.ar",
+        "name" : "alejandro",
+        "telephone" : "11 5161 2850"
+      },
+      "color" : "Plomo",
+      "prize" : 490,
+      "product" : "Bandeja chica",
+      "quantity" : 1
+    },
+    "-Kz5W0dnNUJZP4Qcx5Rr" : {
+      "client" : {
+        "email" : "alejandroquadri@gmail.com",
+        "name" : "Alejandro",
+        "telephone" : "11 5161 2850"
+      },
+      "color" : "Rosa",
+      "prize" : 3500,
+      "product" : "Set de 5 percheros",
+      "quantity" : 1
+    },
+    "-Kz5Wfn_F6gsfUYTN_-U" : {
+      "client" : {
+        "email" : "alejandroquadri@gmail.com",
+        "name" : "Alejandro Quadri",
+        "telephone" : "11 5161 2850"
+      },
+      "color" : "Rosa",
+      "prize" : 3500,
+      "product" : "Set de 5 percheros",
+      "quantity" : 1
+    }
+  },
+  "products" : [ {
+    "bullets" : [ "Medidas respectivas de perchero grande, medio y chico: diametros 170, 140 y 90 mm. Altura 56 mm, grande y mediano, 53 mm chico", "Limpiar con un paño humedo, agua y jabon. Nunca utilizar limpiadores o compuestos acidos", "Bulones para su colocación incluidos" ],
+    "colors" : [ "Plata", "Antracita", "Gris", "Dalmata", "Natural", "Plomo", "Rosa", "Negro" ],
+    "descripcion" : "En diversos colores, texturas y terminaciones. Es posible configurar infinitos patrones",
+    "family" : "objetos",
+    "images" : [ {
+      "order" : 0,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2Fpercheros1.jpg?alt=media&token=717733dd-4be7-471d-bc7a-3eea0472be87"
+    }, {
+      "order" : 1,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2Fpercheros0.jpg?alt=media&token=2e9c2142-bbb8-4892-9a80-be7a0531575e"
+    }, {
+      "order" : 2,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2Fpercheros3.jpg?alt=media&token=0fdf3448-8199-4330-99ac-26fcdc483d57"
+    } ],
+    "name" : "Set de 5 percheros",
+    "order" : 0,
+    "prize" : 3500
+  }, {
+    "bullets" : [ "Medidas: 450 x 350 x 640 mm", "Tratada para lograr espectacular impermeabilizacion, sin perder su acabado unico", "Limpiar con un paño humedo, agua y jabon. Nunca utilizar limpiadores o compuestos acidos" ],
+    "colors" : [ "Gris", "Dalmata", "Natural", "Plomo", "Rosa", "Negro" ],
+    "descripcion" : "Aporta un toque de comodidad y estilo a tu living. Especialmente comoda para relajarse despues de un largo dia de trabajo. Versatil y util para recibir amigos",
+    "family" : "mesas",
+    "images" : [ {
+      "order" : 0,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2FmesaArrime0.jpg?alt=media&token=78cbba1b-d6ee-4941-9928-27cd785b03c2"
+    }, {
+      "order" : 1,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2FmesaArrime3blanco.jpg?alt=media&token=bf618c0f-cfb0-4ee6-bf50-a3b73c504d17"
+    }, {
+      "order" : 2,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2FmesaArrime4blanco.jpg?alt=media&token=24a23d7b-0eeb-44f0-975c-40b419c54ec7"
+    } ],
+    "name" : "Mesa de arrime",
+    "order" : 1,
+    "prize" : 4200
+  }, {
+    "bullets" : [ "Medidas: diametro 400 mm, altura 550 mm", "Tratada para lograr espectacular impermeabilizacion, sin perder su acabado unico", "Limpiar con un paño humedo, agua y jabon. Nunca utilizar limpiadores o compuestos acidos" ],
+    "colors" : [ "Gris", "Dalmata", "Natural", "Plomo", "Rosa", "Negro" ],
+    "descripcion" : "Diseño sofisticado, minimalista y elegante. Una pieza singular y especial que aportará personalidad a tu ambiente",
+    "family" : "mesas",
+    "images" : [ {
+      "order" : 0,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2FmesaRedondaBaja0.jpg?alt=media&token=6c77dc05-842a-46ec-9fd3-ea1b675fe4a2"
+    }, {
+      "order" : 1,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2FmesaRedondaBaja1.jpg?alt=media&token=c687ae2d-9305-4a16-831f-278f16e81105"
+    }, {
+      "order" : 2,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2FmesaRedondaBaja2.jpg?alt=media&token=6d95d9e2-070f-4865-80cb-ddb2b2282120"
+    } ],
+    "name" : "Mesa redonda baja",
+    "order" : 2,
+    "prize" : 4500
+  }, {
+    "bullets" : [ "Medidas: diametro 160 mm, espesor 10 mm", "Tratada para lograr espectacular impermeabilizacion, sin perder su acabado unico", "Limpiar con un paño humedo, agua y jabon. Nunca utilizar limpiadores o compuestos acidos" ],
+    "colors" : [ "Gris", "Dalmata", "Natural", "Plomo", "Rosa", "Negro" ],
+    "descripcion" : "Pulido extra fino en su superficie. Canto filoso. Terminaciones suaves y satinadas en su parte inferior y bordes. Ambas superficies conviven en armonia. Una pieza singular y versatil. Robusta para un uso diario, delicada para aportar personalidad a tu ambientacion",
+    "family" : "objetos",
+    "images" : [ {
+      "order" : 0,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2Fplato2.jpg?alt=media&token=e0ebfe2a-d3c5-47bf-bb96-c0876b651d5f"
+    }, {
+      "order" : 1,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2Fplato3.jpg?alt=media&token=0db98ce5-7f13-434b-bc25-ad851f1a1dd0"
+    }, {
+      "order" : 2,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2Fplato0.jpg?alt=media&token=3cfffdfa-62b9-49a7-aaf7-62e76913e639"
+    } ],
+    "name" : "Bandeja chica",
+    "order" : 3,
+    "prize" : 490
+  }, {
+    "bullets" : [ "Medidas: diametro 90 mm, espesor 10 mm", "Tratados para lograr espectacular impermeabilizacion, sin perder su acabado unico", "Limpiar con un paño humedo, agua y jabon. Nunca utilizar limpiadores o compuestos acidos" ],
+    "colors" : [ "Gris", "Dalmata", "Natural", "Plomo", "Rosa", "Negro" ],
+    "descripcion" : "Pulido extra fino en su superficie. Canto filoso. Terminaciones suaves y satinadas en su parte inferior y bordes. Ambas superficies conviven en armonia",
+    "family" : "objetos",
+    "images" : [ {
+      "order" : 0,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2FPosaVasos1.jpg?alt=media&token=d05049b5-6c15-48e2-b9c4-b23d62429e77"
+    }, {
+      "order" : 1,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2FPosaVasos0.jpg?alt=media&token=2706022b-0b42-4021-9406-57e61a08a3ac"
+    } ],
+    "name" : "Set de 4 posavasos",
+    "order" : 4,
+    "prize" : 480
+  }, {
+    "bullets" : [ "Medidas: grande diametro 250 mm, alto 350 mm; mediana diametro 200 mm, alto 300 mm; baja diametro 150 mm, alto 200 mm;", "Tratada para lograr espectacular impermeabilizacion, sin perder su acabado unico", "Limpiar con un paño humedo, agua y jabon. Nunca utilizar limpiadores o compuestos acidos" ],
+    "colors" : [ "Plata", "Antracita", "Gris", "Dalmata", "Natural", "Plomo", "Rosa", "Negro" ],
+    "descripcion" : "Pulido satinado, un toque especial para tu jardin. Para esa planta especial, esa que debe destacar. Acompañala con una maceta singular. Convertí ese espacio en algo distinto. En 3 medidas grande, mediana y chica",
+    "family" : "objetos",
+    "images" : [ {
+      "order" : 0,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2Fmaseta1.jpg?alt=media&token=0397a4ef-863c-4b40-82e2-0502c1a761e4"
+    }, {
+      "order" : 1,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2Fmaseta2.jpg?alt=media&token=1df4ff71-58e7-483b-964d-40231a32fb98"
+    }, {
+      "order" : 1,
+      "url" : "https://firebasestorage.googleapis.com/v0/b/designweb-249da.appspot.com/o/products%2Fmaseta3.jpg?alt=media&token=8edb6a7e-b539-4eb1-9092-9dae5828c774"
+    } ],
+    "name" : "Maceta",
+    "order" : 5,
+    "prize" : 400
+  } ]
+}
